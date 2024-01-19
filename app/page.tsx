@@ -1,9 +1,11 @@
 "use client"
-import Image from "next/image";
+
 import { useState } from "react";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { BsFillMoonStarsFill} from "react-icons/bs";
-import portrait from "../public/IMG_1450.png"
+import Navbar from "./navbar";
+import Header from "./header";
+import macbook from "../public/macbook.png"
+import Image from "next/image";
+
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
@@ -11,29 +13,29 @@ export default function Home() {
   return (
     <div className={darkMode ? "dark" : ""}>
       <main className="bg-white ">
-      <section className="min-h-screen">
-        <nav className="flex justify-between gap-4 mb-12 py-10 shadow-md shadow-slate-400 ">
-          <h1>Thang.dev</h1>
-          <ul className="flex items-center gap-4">
-          <li><BsFillMoonStarsFill/></li>   
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>Skills</li>
-            <li>Projects</li>
-            <li>Resume</li>
+  
 
-          </ul>
-        </nav>
-        <div className="sm:text-center md:text-center lg:text-start font-bold">
-          <div className="mx-auto w-60 h-60 overflow-hidden relative mt-20 rounded-full">
-            <Image alt="photo" src={portrait} layout="fill" objectFit="cover"></Image>
+      <section className="min-h-screen w-full flex-col relative">
+      <Navbar/>
+      <Header/>
+      
+       
+      </section>
+      <section className="px-10">
+        <div className="flex-col items-center justify-center">
+          <div className="grid gap-4 grid-cols-2 items-center justify-center">
+            <div className="relative h-80 rounded-md overflow-hidden object-cover">
+              <Image src={macbook} alt="macbook"  />
+            </div>
+            <div>
+              <h3 className="font-bold text-blue-400">ABOUT ME</h3>
+              <p className="break-words mt-4 font-light">I am currently a computer science student at Toronto Metropolitan University (Ryerson University) who is a skilled full-stack developer. Through experienced in my internship and projects, I have gained experiences in langauges such as JavaScript, PHP, Python. Experience in framework like React, MERN stack and developer tools like Git </p>
+            </div>
           </div>
-          <h2 className="text-4xl mt-10">Full-Stack Developer</h2>
-          <h3 className="mt-4">Hi, I&#39;m an enthusiastic</h3>
-          <div className="flex justify-center gap-4 text-2xl py-5 ">
-            <AiFillLinkedin/>
-            <AiFillGithub/>
+
+          <div className="flex flex-col gap-4 items-center mt-10 ">
+            <h2 className="font-light text-lg">What Skills I have</h2>
+            <h2 className="text-4xl font-bold">Tech Stack</h2>
           </div>
         </div>
       </section>
