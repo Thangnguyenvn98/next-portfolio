@@ -1,12 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {   webpack: (config, options) =>
-    {
-        config.module.rules.push({
-            test: /\.pdf$/i,
-            type: 'asset/source'
-        })
+const nextConfig = {   
+    images: {
+        dangerouslyAllowSVG: true,
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'skillicons.dev',
 
-        return config
-    },};
+          },
+        ],
+        formats: ['image/avif'],
+      }
+};
 
 export default nextConfig;

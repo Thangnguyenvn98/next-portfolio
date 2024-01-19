@@ -21,7 +21,7 @@ export default function Home() {
       
        
       </section>
-      <section className="px-10">
+      <section id="about" className="px-10">
         <div className="flex-col items-center justify-center">
           <div className="grid gap-4 grid-cols-2 items-center justify-center">
             <div className="relative h-80 rounded-md overflow-hidden object-cover">
@@ -36,6 +36,23 @@ export default function Home() {
           <div className="flex flex-col gap-4 items-center mt-10 ">
             <h2 className="font-light text-lg">What Skills I have</h2>
             <h2 className="text-4xl font-bold">Tech Stack</h2>
+            <div className="mt-8 flex flex-wrap gap-10 justify-center">
+                <ul className="flex-col">
+                  <li> <Image src="https://skillicons.dev/icons?i=html,css,js,ts" width={300} height={80} alt="stack-icon"/></li>
+                  <li className="mt-10"> <Image src="https://skillicons.dev/icons?i=mongodb,express,react,nodejs" width={300} height={80} alt="stack-icon"/></li>
+                
+                </ul>
+                <ul className="flex-col">
+                <li> <Image src="https://skillicons.dev/icons?i=py,java,c,git" width={300} height={80} alt="stack-icon"/></li>
+                  <li className="mt-10"> <Image src="https://skillicons.dev/icons?i=nextjs,tailwind,prisma,postgres" width={300} height={80} alt="stack-icon"/></li>
+                </ul>
+             
+          
+           
+           
+            </div>
+            
+            
           </div>
         </div>
       </section>
