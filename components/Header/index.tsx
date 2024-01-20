@@ -1,8 +1,11 @@
 import Image from "next/image"
-import portrait from "../public/IMG_1450.png"
+import portrait from "../../public/IMG_1450.png"
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
 
-export default function Header(){
+interface HeaderProps {
+  dark: boolean;
+}
+export default function Header({dark}:HeaderProps){
 
     return (
           <div id="home" className="px-4 py-16">       {/* Container */}
@@ -18,8 +21,8 @@ export default function Header(){
   
            </div>
   
-           <div className="mx-auto w-60 h-60 overflow-hidden mt-6 relative rounded-full"> {/* Hero Image */}
-              <Image alt="photo" src={portrait} layout="fill" objectFit="cover"></Image>
+           <div className="mx-auto w-60 h-60 overflow-hidden mt-6 relative rounded-full object-cover"> {/* Hero Image */}
+              <Image alt="photo" src={portrait} layout="fill"></Image>
             </div>
             </div>
           </div>

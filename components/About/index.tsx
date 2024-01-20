@@ -1,4 +1,4 @@
-import macbook from "../public/macbook.png"
+import macbook from "../../public/macbook.png"
 import Image from "next/image";
 
 export default function About() {
