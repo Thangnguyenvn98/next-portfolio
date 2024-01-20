@@ -8,7 +8,7 @@ interface HeaderProps {
 export default function Header({dark}:HeaderProps){
 
     return (
-          <div id="home" className="px-4 py-16">       {/* Container */}
+          <div className="px-4 py-16">       {/* Container */}
           <div className="flex relative mt-10 gap-4 items-center  justify-center"> {/* Content */}
             <div className="flex relative mt-40 justify-center items-center gap-10"> {/* Hero main */}
             <div className="font-bold flex-col relative">{/* Hero text */}

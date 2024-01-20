@@ -7,6 +7,7 @@ import About from "../components/About";
 import Footer from "../components/Footer";
 import Image from "next/image";
 import Portfolio from "../components/Portfolio"
+import Contact from "@/components/Contact";
 
 
 
@@ -17,7 +18,7 @@ export default function Home() {
       <main className="bg-white ">
   
 
-      <section className="min-h-screen w-full flex-col relative">
+      <section className="min-h-screen w-full flex-col relative" id="home">
       <Navbar/>
       <Header dark={darkMode}/>
       
@@ -29,6 +30,10 @@ export default function Home() {
 
       <section id="project" className="px-10">
         <Portfolio/>
+      </section>
+
+      <section id="contact" className="px-10">
+        <Contact/>
       </section>
       <Footer/>
       </main>
