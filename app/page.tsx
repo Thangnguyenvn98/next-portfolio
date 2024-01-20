@@ -15,12 +15,12 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
   return (
     <div className={darkMode ? "dark" : ""}>
-      <main className="bg-white ">
+      <main className="bg-white dark:bg-gray-900 ">
   
 
       <section className="min-h-screen w-full flex-col relative" id="home">
-      <Navbar/>
-      <Header dark={darkMode}/>
+      <Navbar dark={darkMode} setDark={setDarkMode}/>
+      <Header/>
       
        
       </section>
