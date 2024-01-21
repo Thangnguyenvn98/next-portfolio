@@ -1,3 +1,4 @@
+"use client"
 import ProjectCard from "../ProjectCard";
 import filler1 from "../../public/filler1.jpeg"
 

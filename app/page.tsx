@@ -15,6 +15,7 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
   return (
     <div className={darkMode ? "dark" : ""}>
+    
       <main className="bg-white dark:bg-gray-900 ">
   
       <Navbar dark={darkMode} setDark={setDarkMode}/>

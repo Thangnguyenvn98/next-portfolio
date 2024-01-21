@@ -1,12 +1,14 @@
+"use client"
+
 import macbook from "../../public/macbook.png"
 import Image from "next/image";
 
 export default function About() {
     return (
-        <div className="flex-col items-center justify-center">
+        <div className="flex-col items-center justify-center mt-40 md:mt-25">
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center ">
-          <div className="relative h-80 rounded-lg overflow-hidden object-cover">
-            <Image src={macbook} alt="macbook"  />
+          <div className="relative h-80 md:h-60 lg:h-80 rounded-xl overflow-hidden object-cover">
+            <Image src={macbook} alt="macbook" sizes="(max-height: 30rem)" fill />
           </div>
           <div>
             <h3 className="font-bold text-blue-400 text-4xl">About Me</h3>
@@ -19,13 +21,13 @@ export default function About() {
           <h2 className="text-4xl font-bold">Tech Stack</h2>
           <div className="mt-8 flex flex-wrap gap-10 justify-center py-8">
               <ul >
-                <li> <Image src="https://skillicons.dev/icons?i=html,css,js,ts" width={300} height={80} alt="stack-icon"/></li>
-                <li className="mt-10"> <Image src="https://skillicons.dev/icons?i=mongodb,express,react,nodejs" width={300} height={80} alt="stack-icon"/></li>
+                <li> <Image src="https://skillicons.dev/icons?i=html,css,js,ts" width={300} height={80}  style={{width:"300px",height:"auto"}} alt="stack-icon"/></li>
+                <li className="mt-10"> <Image src="https://skillicons.dev/icons?i=mongodb,express,react,nodejs"  style={{width:"300px",height:"auto"}} width={300} height={80} alt="stack-icon"/></li>
               
               </ul>
               <ul >
-              <li> <Image src="https://skillicons.dev/icons?i=py,java,c,git" width={300} height={80} alt="stack-icon"/></li>
-                <li className="mt-10"> <Image src="https://skillicons.dev/icons?i=nextjs,tailwind,prisma,postgres" width={300} height={80} alt="stack-icon"/></li>
+              <li> <Image src="https://skillicons.dev/icons?i=py,java,c,git" width={300} height={80} style={{width:"300px",height:"auto"}} alt="stack-icon"/></li>
+                <li className="mt-10"> <Image src="https://skillicons.dev/icons?i=nextjs,tailwind,prisma,postgres"  style={{width:"300px",height:"auto"}} width={300} height={80} alt="stack-icon"/></li>
               </ul>
            
         

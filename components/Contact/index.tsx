@@ -1,29 +1,11 @@
-import { useRef, useEffect } from "react"
+"use client"
+import { useRef } from "react"
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser'
 import { TfiEmail } from "react-icons/tfi";
 import { FaLocationDot } from "react-icons/fa6";
-
-// const center: google.maps.LatLngLiteral = {lat: 30, lng: -110};
-
-// function initMap(): void {
-//     const map = new google.maps.Map(document.getElementById("map") as HTMLElement, {
-//       center,
-//       zoom: 8
-//     });
-//   }
+import Map from "../Map";
 
 export default function Contact(){
-
-
-    // useEffect(() => {
-  
-    //  initMap();
-    // },
-    // [])
-  
-
-
-
 
     const form = useRef<HTMLFormElement>(null)
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -39,14 +21,15 @@ export default function Contact(){
       };}
     return (
         <div className="px-5 text-center mt-14">
-            <div className="mt-10">
+            <div className="mt-10 lg:mt-40">
             <h3 className="text-sm">GET IN TOUCH</h3>
             <h1 className="text-4xl font-extrabold text-blue-400">Contact</h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="mt-10 ">
-                <div className="flex flex-col gap-10 text-center h-full">
-                    <article className="p-20 border-solid  bg-transparent shadow-md shadow-black rounded-lg flex-grow">
-                        <div className="flex flex-col gap-4 justify-center items-center">
+            
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
+            <div className="mt-10">
+                <div className="flex flex-col gap-10 text-center items-center md:flex-row lg:flex-col">
+                    <article className="lg:p-20 py-5 w-full md:py-14 border-solid bg-transparent lg:w-full shadow-md shadow-black rounded-lg flex-grow">
+                        <div className="flex flex-col p-2 gap-6 justify-center items-center">
                         <TfiEmail className="text-blue-500"/>
                         <h3 className="font-extrabold text-2xl">Email</h3>
                         <h3 className="font-md">thang.nguyen@torontomu.ca</h3>
@@ -55,16 +38,8 @@ export default function Contact(){
                             </div> 
                      
                     </article>
-                    <article className="p-20 border-solid  bg-transparent shadow-md shadow-black rounded-lg flex-grow">
-                        <div className="flex flex-col gap-4 justify-center items-center">
-                        <FaLocationDot className="text-blue-500"/>
-                        <h3>Email</h3>
-                        <h3>thang.nguyen@torontomu.ca</h3>
-                        a
-                        send a message
-                            </div> 
-                     
-                    </article>
+                   
+                    {/* <Map/> */}
                 </div>
             
                 </div>

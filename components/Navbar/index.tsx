@@ -1,3 +1,4 @@
+"use client"
 import { useState } from "react";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -11,7 +12,7 @@ interface NavBarProps {
 export  const scrollToSection = (id: string) => {
     
     const width = window.innerWidth
-    const offset = width <= 768 ? 60 : 120
+    const offset = width <= 768 ? 70 : 120
   
     const targetSection = document.getElementById(id);
     if (targetSection) {

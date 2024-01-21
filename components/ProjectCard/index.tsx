@@ -1,3 +1,4 @@
+"use client"
 import Image, { StaticImageData } from "next/image"
 
 interface ProjectCardProps {
@@ -12,7 +13,7 @@ export default function ProjectCard({src,alt,title,description,technologies}:Pro
     return (
         <div className="flex-col bg-slate-500 p-4 rounded-lg items-center mt-10">
         <div className="relative rounded-lg overflow-hidden object-cover w-full h-40">
-        <Image src={src} alt={alt} layout="fill" />
+        <Image src={src} alt={alt} fill/>
         </div>
           
         

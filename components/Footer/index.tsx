@@ -1,3 +1,5 @@
+"use client"
+
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 export default function Footer(){
