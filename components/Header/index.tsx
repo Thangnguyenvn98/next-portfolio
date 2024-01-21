@@ -2,7 +2,7 @@ import Image from "next/image"
 import portrait from "../../public/IMG_1450.png"
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
 import { FaRegHandPointDown } from "react-icons/fa";
-import { MdDownloadForOffline } from "react-icons/md";
+import { MdDownloadForOffline, MdOutlineWork } from "react-icons/md";
 import { scrollToSection } from "../Navbar";
 
 
@@ -10,8 +10,8 @@ import { scrollToSection } from "../Navbar";
 export default function Header(){
 
     return (
-          <div className="px-4 py-16">       {/* Container */}
-          <div className="flex mt-10 gap-4 justify-center"> {/* Content */}
+          <div className="px-4">       {/* Container */}
+          <div className="flex gap-4 justify-center"> {/* Content */}
             <div className="flex flex-col-reverse lg:flex-row mt-40 items-center gap-10"> {/* Hero main */}
             <div className="font-bold flex-col text-center lg:text-start ">{/* Hero text */}
            <h2 className="text-4xl mt-10 ">Full-Stack Developer 👋</h2>
@@ -20,7 +20,7 @@ export default function Header(){
             <a href="https://www.linkedin.com/in/thang-nguyen98/" target="_blank"><AiFillLinkedin/></a>
             <a href="https://github.com/Thangnguyenvn98" target="_blank"><AiFillGithub/></a>
           </span>
-          <div className="flex gap-10 justify-center md:justify-start items-center mt-10">
+          <div className="flex gap-10 justify-center lg:justify-start items-center mt-4">
          
             
             <div className="flex items-center gap-2 bg-slate-300 rounded-md p-4">
@@ -32,8 +32,8 @@ export default function Header(){
             </div>
 
             <div className="flex items-center gap-2">
-            <button onClick={()=> scrollToSection("about")}>More about me below</button>
-            <FaRegHandPointDown/>
+            <button onClick={()=> scrollToSection("project")}>Projects</button>
+            <MdOutlineWork/>
             </div>
           </div>
   

@@ -9,7 +9,10 @@ interface NavBarProps {
     setDark:React.Dispatch<React.SetStateAction<boolean>>;
   }
 export  const scrollToSection = (id: string) => {
-    const offset = 120
+    
+    const width = window.innerWidth
+    const offset = width <= 768 ? 60 : 120
+  
     const targetSection = document.getElementById(id);
     if (targetSection) {
       window.scrollTo({
@@ -18,7 +21,7 @@ export  const scrollToSection = (id: string) => {
       });
     }
     }
-export default function Navbar({dark,setDark}:NavBarProps) {
+export default function Navbar({dark,setDark}: NavBarProps) {
     const [openMenu, setOpenMenu] = useState(false)
 
     return (
@@ -34,7 +37,7 @@ export default function Navbar({dark,setDark}:NavBarProps) {
           {openMenu ? <IoMdCloseCircle/> : <GiHamburgerMenu/> }
         </div>
         
-                <ul className={`md:flex md:items-center md:gap-6 md:static md:z-auto absolute top-20 rounded-lg bg-gradient-to-r from-stone-600 via-stone-800 to-stone-950 p-7 text-white font-poppins md:text-black  md:from-white md:w-auto transition-all duration-700 ease-in-out ${openMenu ? 'left-[35rem]' : 'right-[-490px]'} `} >
+                <ul className={`md:flex md:items-center md:gap-6 md:static md:z-auto absolute top-20 rounded-lg bg-gradient-to-r from-stone-600 via-stone-800 to-stone-950 p-7 text-white font-poppins md:text-black  md:from-white md:w-auto transition-all duration-700 ease-in-out ${openMenu ? 'right-[40px]' : 'right-[-490px]'} `} >
                     <li className=""><button onClick={()=>scrollToSection("home")}>Home</button></li>
                     <li className=""><button onClick={()=>scrollToSection("about")}>About</button></li>
                     <li className=""><button onClick={()=>scrollToSection("project")}>Projects</button></li>

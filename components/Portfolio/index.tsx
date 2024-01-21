@@ -13,7 +13,7 @@ export default function Portfolio(){
 
     return(
         <div className="">
-        <div className="py-10 ">
+        <div className="py-10">
           <div className="mt-8">
           <h2 className="font-bold text-4xl text-blue-400">Projects</h2>
           <p className="break-words font-light text-lg mt-10">The following projects below showcase my skill and experience that can be applied in real worlds. Each project is briefly describe with its functionality and live demos to it. It served as proof for my ability to solve complex problems and manage each projects effectively.</p>
