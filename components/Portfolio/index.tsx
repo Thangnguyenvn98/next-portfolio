@@ -1,13 +1,19 @@
 "use client"
 import ProjectCard from "../ProjectCard";
 import filler1 from "../../public/filler1.jpeg"
+import portfolio1 from "../../public/portfolio1.png"
+import portfolio2 from "../../public/portfolio2.png"
+import portfolio3 from "../../public/portfolio3.png"
+import portfolio4 from "../../public/portfolio4.png"
 
 export default function Portfolio(){
 
     const projects = [
-        { src: filler1, alt:"filter1",title:"Project1",description:"Description of project used", technologies:"Panda python madlip numpy"},
-        {src: filler1, alt:"filter1",title:"Project1",description:"Description of project used", technologies:"Panda python madlip numpy"},
-        {src: filler1, alt:"filter1",title:"Project1",description:"Description of project used", technologies:"Panda python madlip numpy"}
+        { src: portfolio1, alt:"port1",title:"PostUrThought",description:"Description of project used", technologies:"Panda python madlip numpy",github:"https://github.com/Thangnguyenvn98/NextJS-PostUrThought"},
+        {src: portfolio2, alt:"port2",title:"Booking App",description:"Description of project used", technologies:"Panda python madlip numpy",github:"https://github.com/Thangnguyenvn98/MERN_booking"},
+        {src: portfolio3, alt:"port3",title:"My Movie",description:"Description of project used", technologies:"Panda python madlip numpy",github:"https://github.com/Thangnguyenvn98/Netflix-NextJS"},
+        {src: portfolio4, alt:"port3",title:"Portfolio Website",description:"Description of project used", technologies:"Panda python madlip numpy",github:"https://github.com/Thangnguyenvn98/Portfolio-Website"}
+
 
     ]
 

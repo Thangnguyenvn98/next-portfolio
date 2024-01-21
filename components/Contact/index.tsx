@@ -2,7 +2,7 @@
 import { useRef } from "react"
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser'
 import { TfiEmail } from "react-icons/tfi";
-import { FaLocationDot } from "react-icons/fa6";
+
 import Map from "../Map";
 
 export default function Contact(){
@@ -61,7 +61,7 @@ export default function Contact(){
                </div>
            
          
-          <button type="submit" value="Send" className="p-4 bg-white text-gray-400 text-center rounded-lg w-40">Send Message</button>
+          <button type="submit" value="Send" className="p-4 bg-white text-black text-center rounded-lg w-40">Send Message</button>
                 
      
             </form>

@@ -1,5 +1,7 @@
 "use client"
 import Image, { StaticImageData } from "next/image"
+import { FaGithub } from "react-icons/fa";
+
 
 interface ProjectCardProps {
     src: StaticImageData;
@@ -7,12 +9,14 @@ interface ProjectCardProps {
     title:string;
     description:string;
     technologies:string;
+    github:string;
 
 }
-export default function ProjectCard({src,alt,title,description,technologies}:ProjectCardProps){
+export default function ProjectCard({src,alt,title,description,technologies,github}:ProjectCardProps){
     return (
-        <div className="flex-col bg-slate-500 p-4 rounded-lg items-center mt-10">
-        <div className="relative rounded-lg overflow-hidden object-cover w-full h-40">
+        <div className="hover:scale-[1.1] flex-col bg-slate-500 p-8 rounded-lg items-center mt-10">
+        <div className="relative rounded-lg overflow-hidden object-cover w-full h-[13rem]">
+            <a href={github} target="_blank" className="absolute text-white p-2 z-30 right-2 top-2 rounded-full bg-black text-4xl"><FaGithub/></a>
         <Image src={src} alt={alt} fill/>
         </div>
           

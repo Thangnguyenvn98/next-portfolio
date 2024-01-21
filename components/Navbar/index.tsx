@@ -25,6 +25,12 @@ export  const scrollToSection = (id: string) => {
 export default function Navbar({dark,setDark}: NavBarProps) {
     const [openMenu, setOpenMenu] = useState(false)
 
+    const sections = [
+      {name:"home",section:"Home"},
+      {name:"about",section:"About"},
+    {name:"project",section:"Projects"},
+    {name:"contact",section:"Contact"}]
+
     return (
         <nav id="navbar" className=" bg-white z-50 top-0 left-0 md:shadow-md md:shadow-slate-400 fixed w-full">
           <div className="flex items-center justify-between py-4 px-7">
@@ -32,17 +38,20 @@ export default function Navbar({dark,setDark}: NavBarProps) {
             <button onClick={()=>scrollToSection("home")}>Thang.dev</button>
             </div>
             <div className="left-1/2 top-6 absolute lg:static md:top-12">
-          {dark ?  <BsFillSunFill className="cursor-pointer" onClick={()=> setDark(!dark)}/> : <BsFillMoonStarsFill className="cursor-pointer" onClick={()=> setDark(!dark)}/>}
+          {dark ?  <BsFillSunFill className="cursor-pointer hover:text-yellow-100" onClick={()=> setDark(!dark)}/> : <BsFillMoonStarsFill className="cursor-pointer hover:text-yellow-200" onClick={()=> setDark(!dark)}/>}
         </div>
             <div onClick={()=>setOpenMenu(!openMenu)} className="absolute right-8 top-4 text-4xl cursor-pointer md:hidden">
           {openMenu ? <IoMdCloseCircle/> : <GiHamburgerMenu/> }
         </div>
         
-                <ul className={`md:flex md:items-center md:gap-6 md:static md:z-auto absolute top-20 rounded-lg bg-gradient-to-r from-stone-600 via-stone-800 to-stone-950 p-7 text-white font-poppins md:text-black  md:from-white md:w-auto transition-all duration-700 ease-in-out ${openMenu ? 'right-[40px]' : 'right-[-490px]'} `} >
-                    <li className=""><button onClick={()=>scrollToSection("home")}>Home</button></li>
-                    <li className=""><button onClick={()=>scrollToSection("about")}>About</button></li>
-                    <li className=""><button onClick={()=>scrollToSection("project")}>Projects</button></li>
-                    <li className=""><button onClick={()=>scrollToSection("contact")}>Contact</button></li>
+                <ul className={` font-semibold md:flex md:items-center md:gap-6 md:static md:z-auto absolute top-20 rounded-lg bg-gradient-to-r from-stone-600 via-stone-800 to-stone-950 p-7 text-white md:text-black  md:from-white md:w-auto transition-all duration-500 ease-out ${openMenu ? 'right-[40px]' : 'right-[-490px]'} `} >
+                    {sections.map((section,index) => (
+                      <li key={index} className="hover:text-blue-500">
+                        <button onClick={()=>scrollToSection(section.name)}>{section.section}</button>
+                      </li>
+                    ))}
+                    
+                   
                 </ul>
             
           </div>
