@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function About() {
     return (
         <div className="flex-col items-center justify-center">
-        <div className="grid gap-4 grid-cols-2 items-center ">
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center ">
           <div className="relative h-80 rounded-lg overflow-hidden object-cover">
             <Image src={macbook} alt="macbook"  />
           </div>

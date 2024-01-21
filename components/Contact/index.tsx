@@ -42,10 +42,10 @@ export default function Contact(){
             <div className="mt-10">
             <h3 className="text-sm">GET IN TOUCH</h3>
             <h1 className="text-4xl font-extrabold text-blue-400">Contact</h1>
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="mt-10 ">
                 <div className="flex flex-col gap-10 text-center h-full">
-                    <article className="p-20 border-solid  bg-transparent shadow-xl rounded-lg flex-grow">
+                    <article className="p-20 border-solid  bg-transparent shadow-md shadow-black rounded-lg flex-grow">
                         <div className="flex flex-col gap-4 justify-center items-center">
                         <TfiEmail className="text-blue-500"/>
                         <h3 className="font-extrabold text-2xl">Email</h3>
@@ -55,7 +55,7 @@ export default function Contact(){
                             </div> 
                      
                     </article>
-                    <article className="p-20 border-solid  bg-transparent shadow-xl rounded-lg flex-grow">
+                    <article className="p-20 border-solid  bg-transparent shadow-md shadow-black rounded-lg flex-grow">
                         <div className="flex flex-col gap-4 justify-center items-center">
                         <FaLocationDot className="text-blue-500"/>
                         <h3>Email</h3>
@@ -68,25 +68,25 @@ export default function Contact(){
                 </div>
             
                 </div>
-            <div className=" mt-10 p-4 rounded-lg bg-sky-950">
-            <form ref={form} onSubmit={sendEmail} className="flex text-yellow-100 flex-col gap-6 text-start" >
+            <div className=" mt-10 p-4 rounded-lg bg-black">
+            <form ref={form} onSubmit={sendEmail} className="flex text-white font-semibold flex-col gap-6 text-start" >
                 <div className="flex flex-col">
-                <label className="py-4">Your Name</label>
-            <input className="p-4 border-none text-black  rounded-lg" type="text" name='name' placeholder='What is your first and last name' required />
+                <label className="py-4">Your Full Name</label>
+            <input className="p-4 border-none text-black  rounded-lg" type="text" name='name'  required />
                 </div>
 
                <div className="flex flex-col">
-               <label className="py-4">Your email</label>
-            <input className="p-4 border-none text-black  rounded-lg"type='email' name='email' placeholder='What is your email address ?' required />
+               <label className="py-4">Your Email Adress</label>
+            <input className="p-4 border-none text-black  rounded-lg"type='email' name='email' required />
                </div>
 
                <div className="flex flex-col">
-               <label className="py-4">Your Message</label>
-          <textarea name="message" className="p-4 border-none text-black  rounded-lg" placeholder="What do you want to tell me ?" rows={7} required></textarea>
+               <label className="py-4">Your Message To Me</label>
+          <textarea name="message" className="p-4 border-none text-black  rounded-lg" rows={7} required></textarea>
                </div>
            
          
-          <button type="submit" value="Send" className="p-4 bg-white text-black text-center rounded-lg w-40">Send Message</button>
+          <button type="submit" value="Send" className="p-4 bg-white text-gray-400 text-center rounded-lg w-40">Send Message</button>
                 
      
             </form>

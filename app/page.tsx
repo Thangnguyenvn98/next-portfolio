@@ -17,9 +17,9 @@ export default function Home() {
     <div className={darkMode ? "dark" : ""}>
       <main className="bg-white dark:bg-gray-900 ">
   
-
-      <section className="min-h-screen w-full flex-col relative" id="home">
       <Navbar dark={darkMode} setDark={setDarkMode}/>
+      <section className="min-h-screen w-full flex-col relative" id="home">
+      
       <Header/>
       
        

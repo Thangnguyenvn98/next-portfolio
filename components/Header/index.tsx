@@ -20,12 +20,12 @@ export default function Header(){
             <a href="https://www.linkedin.com/in/thang-nguyen98/" target="_blank"><AiFillLinkedin/></a>
             <a href="https://github.com/Thangnguyenvn98" target="_blank"><AiFillGithub/></a>
           </span>
-          <div className="flex gap-10 items-center mt-10">
+          <div className="flex gap-10 justify-center md:justify-start items-center mt-10">
          
             
             <div className="flex items-center gap-2 bg-slate-300 rounded-md p-4">
              
-              <a href="Thang_Resume_2024.pdf" download="thangnguyen-resume" className="">Resume</a>
+              <a href="Thang_Resume_2024.pdf" download="thangnguyen-resume">Resume</a>
 
             
               <MdDownloadForOffline/>
