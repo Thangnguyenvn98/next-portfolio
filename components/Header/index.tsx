@@ -3,11 +3,8 @@
 import Image from "next/image"
 import portrait from "../../public/IMG_1450.png"
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
-import { FaRegHandPointDown } from "react-icons/fa";
 import { MdDownloadForOffline, MdOutlineWork } from "react-icons/md";
 import { scrollToSection } from "../Navbar";
-
-
 
 export default function Header(){
 
@@ -17,7 +14,8 @@ export default function Header(){
             <div className="flex flex-col-reverse lg:flex-row mt-20 md:mt-40 lg:mt-80 items-center gap-10"> {/* Hero main */}
             <div className="font-bold flex-col text-center lg:text-start">{/* Hero text */}
            <h2 className="text-6xl mt-5 md:mt-3">Full-Stack Developer 👋</h2>
-           <p className="mt-10 font-light">Hi, I&#39;m Thang Nguyen. A hard-working and passionate software developer based in Toronto, Canada.</p>
+           <p className="mt-10 font-light">Hi, I&#39;m Thang Nguyen. A hard-working and passionate software developer based in </p>
+           <button onClick={()=> scrollToSection("map")}>Toronto, Canada 📍</button>
           <span className="text-2xl py-5 flex mt-10 gap-4 justify-center lg:justify-start cursor-pointer ">
             <a href="https://www.linkedin.com/in/thang-nguyen98/" className="hover:text-blue-500 dark:hover:text-lime-800" target="_blank"><AiFillLinkedin/></a>
             <a href="https://github.com/Thangnguyenvn98" className="hover:text-blue-500 dark:hover:text-lime-800" target="_blank"><AiFillGithub/></a>

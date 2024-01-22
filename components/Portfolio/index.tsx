@@ -3,7 +3,6 @@ import ProjectCard from "../ProjectCard";
 import portfolio1 from "../../public/portfolio1.png"
 import portfolio2 from "../../public/portfolio2.png"
 import portfolio3 from "../../public/portfolio3.png"
-import portfolio4 from "../../public/portfolio4.png"
 
 export default function Portfolio(){
 

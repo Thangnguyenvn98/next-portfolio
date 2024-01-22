@@ -40,7 +40,7 @@ export default function Map(){
     },[])
     return (
        
-        <div ref={mapRef} className="h-[300px] w-full lg:h-[400px] lg:w-full rounded-lg"/>
+        <div id="map" ref={mapRef} className="h-[300px] w-full lg:h-[400px] lg:w-full rounded-lg"/>
    
         
     )
