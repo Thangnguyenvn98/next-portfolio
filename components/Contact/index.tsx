@@ -20,10 +20,10 @@ export default function Contact(){
         e.currentTarget.reset();
       };}
     return (
-        <div className="px-5 text-center mt-14">
-            <div className="mt-10 lg:mt-40">
-            <h3 className="text-sm">GET IN TOUCH</h3>
-            <h1 className="text-4xl font-extrabold text-blue-400 dark:text-green-500">Contact</h1>
+        <div className="px-5 text-center">
+            <div className="mt-40">
+            <h3 className="text-xl mt-20">GET IN TOUCH</h3>
+            <h1 className="text-6xl font-extrabold text-blue-400 dark:text-green-500">Contact</h1>
             
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
             <div className="mt-10">
@@ -31,9 +31,9 @@ export default function Contact(){
                     <article className="lg:p-20 py-5 w-full md:py-14 border-solid bg-transparent lg:w-full shadow-md shadow-black dark:shadow-white rounded-lg flex-grow">
                         <div className="flex flex-col p-2 gap-6 justify-center items-center">
                         <TfiEmail size={42} className="text-blue-500 dark:text-green-500"/>
-                        <h3 className="font-extrabold text-2xl">Email</h3>
-                        <h3 className="font-md">thang.nguyen@torontomu.ca</h3>
-                        <a href="mailto:thang.nguyen@torontomu.ca" className="text-blue-500 dark:text-green-500 font-semibold">Send me a message</a>
+                        <h3 className="font-extrabold text-4xl">Email</h3>
+                        <h3 className="text-2xl">thang.nguyen@torontomu.ca</h3>
+                        <a href="mailto:thang.nguyen@torontomu.ca" className="text-blue-500 dark:text-green-500 font-semibold text-lg">Send me a message</a>
                        
                             </div> 
                      
@@ -43,7 +43,7 @@ export default function Contact(){
                 </div>
             
                 </div>
-            <div className=" mt-10 p-4 rounded-lg bg-black dark:bg-white">
+            <div className=" mt-10 p-4 rounded-lg bg-black dark:bg-white shadow-md shadow-black dark:shadow-white">
             <form ref={form} onSubmit={sendEmail} className="flex text-white dark:text-black font-semibold flex-col gap-6 text-start" >
                 <div className="flex flex-col dark:text-black">
                 <label className="py-4">Your Full Name</label>

@@ -13,24 +13,24 @@ export default function About() {
       { src: 'https://skillicons.dev/icons?i=nextjs,tailwind,prisma,postgres', alt: 'stack-icon' },
     ]
     return (
-        <div className="flex-col items-center justify-center mt-40 md:mt-25">
-        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center ">
-          <div className="relative h-80 md:h-60 lg:h-80 rounded-xl overflow-hidden object-cover">
-            <Image src={macbook} alt="macbook" sizes="(max-height: 30rem)" fill />
+        <div className="flex-col items-center justify-center z-30">
+        <div className="grid gap-4 grid-cols-1 md:grid-cols-2 items-center p-10  ">
+          <div className="relative h-full rounded-xl overflow-hidden">
+            <Image src={macbook} alt="macbook" sizes="(max-height: 300px)" objectFit="cover" fill />
           </div>
-          <div>
-            <h2 className="text-md">OVERVIEW</h2>
-            <h3 className="font-bold dark:text-green-500 text-blue-400 text-4xl">About Me</h3>
-            <p className="break-words mt-4 font-light text-sm">I am currently a computer science student at Toronto Metropolitan University (Ryerson University) who is a skilled full-stack developer. Through experienced in my internship and projects, I have gained experiences in langauges such as JavaScript, PHP, Python. Experience in framework like React, MERN stack and developer tools like Git </p>
+          <div className="flex flex-col gap-4 p-4">
+            <h2 className="text-2xl md:text-md font-semibold">OVERVIEW</h2>
+            <h3 className="font-bold dark:text-green-500 text-blue-400 text-6xl md:text-2xl">About Me</h3>
+            <p className="break-words mt-4 font-light text-2xl md:text-md">I am currently a computer science student at Toronto Metropolitan University (Ryerson University) who is a skilled full-stack developer. Through experienced in my internship and projects, I have gained experiences in langauges such as JavaScript, PHP, Python. Experience in framework like React, MERN stack and developer tools like Git </p>
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 items-center mt-10 ">
-          <h2 className="font-light text-lg">What Skills I have</h2>
-          <h2 className="text-4xl font-bold">Tech Stack</h2>
-          <div className="mt-8 flex gap-10 justify-center py-8 flex-wrap">
+        <div className="flex flex-col gap-4 items-center mt-20 ">
+          <h2 className="text-2xl font-semibold text-blue-400">WHAT SKILLS I HAVE</h2>
+          <h2 className="text-6xl font-bold">Tech Stack</h2>
+          <div className="mt-8 md:flex-row flex gap-10 justify-center py-8">
           <ul >
-                <li> 
+                <li className=""> 
                   <TechIcon src={techIcons[0].src} alt={techIcons[0].alt}/>
                   </li>
                 <li className="mt-10">
