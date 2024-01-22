@@ -20,8 +20,8 @@ export default function Contact(){
         e.currentTarget.reset();
       };}
     return (
-        <div className="px-5 text-center">
-            <div className="mt-40">
+        <div className="px-5 text-center mt-[10rem]">
+            <div className="mt-20">
             <h3 className="text-xl mt-20">GET IN TOUCH</h3>
             <h1 className="text-6xl font-extrabold text-blue-400 dark:text-green-500">Contact</h1>
             
@@ -32,7 +32,7 @@ export default function Contact(){
                         <div className="flex flex-col p-2 gap-6 justify-center items-center">
                         <TfiEmail size={42} className="text-blue-500 dark:text-green-500"/>
                         <h3 className="font-extrabold text-4xl">Email</h3>
-                        <h3 className="text-2xl">thang.nguyen@torontomu.ca</h3>
+                        <h3 className="text-lg md:text-2xl">thang.nguyen@torontomu.ca</h3>
                         <a href="mailto:thang.nguyen@torontomu.ca" className="text-blue-500 dark:text-green-500 font-semibold text-lg">Send me a message</a>
                        
                             </div> 

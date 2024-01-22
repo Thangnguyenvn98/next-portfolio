@@ -18,13 +18,13 @@ export default function Portfolio(){
 
     return(
         
-        <div className="p-14">
-          <div className="mt-20">
+        <div className="md:p-14 p-4 relative mt-12">
+          <div className="mt-20 flex flex-col">
           <h2 className="font-bold text-6xl dark:text-green-500 text-blue-400">Projects</h2>
           <p className="break-words font-light text-2xl mt-10">The following projects below showcase my skill and experience that can be applied in real worlds. Each project is briefly describe with its functionality and the source code for it linked to Github. It served as proof for my ability to solve complex problems and manage each projects effectively.</p>
         
           </div>
-          <div className="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 gap-8 ">
+          <div className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-8 ">
             {projects.map((project, index) => (
                 <ProjectCard key={index} {...project}/>
             ))}

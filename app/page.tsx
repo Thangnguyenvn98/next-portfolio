@@ -19,21 +19,21 @@ export default function Home() {
       <main className="bg-white dark:bg-black dark:text-white ">
   
       <Navbar dark={darkMode} setDark={setDarkMode}/>
-      <section className="min-h-screen w-full flex-col relative" id="home">
+      <section className="min-h-screen w-full flex flex-col relative" id="home">
       
       <Header/>
       
        
       </section>
-      <section id="about" className="px-10">
+      <section id="about" className="px-10 relative">
        <About/>
       </section>
 
-      <section id="project" className="px-10">
+      <section className="px-10 relative" id="project">
         <Portfolio/>
       </section>
 
-      <section id="contact" className="px-10">
+      <section id="contact" className="px-10 relative">
         <Contact/>
       </section>
       <Footer/>

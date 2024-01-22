@@ -12,10 +12,13 @@ interface NavBarProps {
 export  const scrollToSection = (id: string) => {
     
     const width = window.innerWidth
-    const offset = width <= 768 ? 70 : 130
+    let offset = width <= 768 ? 70 : 320
   
     const targetSection = document.getElementById(id);
     if (targetSection) {
+      if (targetSection.id === "project"){
+        offset = 100
+      }
       window.scrollTo({
         top: targetSection.offsetTop - offset,
         behavior: "smooth",
