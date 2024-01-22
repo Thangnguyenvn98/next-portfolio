@@ -46,7 +46,7 @@ export default function Navbar({dark,setDark}: NavBarProps) {
         
                 <ul className={` dark:text-black dark:md:from-transparent dark:md:text-white dark:from-slate-100 dark:via-slate-300 dark:to-slate-500 font-semibold md:flex md:items-center md:gap-6 md:static md:z-auto absolute top-20 rounded-lg bg-gradient-to-r from-stone-600 via-stone-800 to-stone-950 p-7 text-white md:text-black  md:from-transparent md:w-auto transition-all duration-500 ease-out ${openMenu ? 'right-[40px]' : 'right-[-490px]'} `} >
                     {sections.map((section,index) => (
-                      <li key={index} className="hover:text-blue-500 dark:hover:text-green-500">
+                      <li key={index} className="hover:text-blue-500 dark:hover:text-lime-800">
                         <button onClick={()=>scrollToSection(section.name)}>{section.section}</button>
                       </li>
                     ))}

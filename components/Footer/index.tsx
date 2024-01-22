@@ -10,8 +10,8 @@ export default function Footer(){
           <div className="flex-col md:flex md:flex-row md:justify-between gap-4 justify-center text-center md:items-center">
             <p>Copyright &#169; {currentDate.getFullYear()}. All rights are reserved. </p>
             <span className="flex gap-4 text-4xl justify-center p-4 md:justify-end">
-            <a href="https://www.linkedin.com/in/thang-nguyen98/" target="_blank" className="hover:text-blue-500 dark:hover:text-green-500"><AiFillLinkedin/></a>
-            <a href="https://github.com/Thangnguyenvn98" target="_blank" className="hover:text-blue-500 dark:hover:text-green-500"><AiFillGithub/></a>
+            <a href="https://www.linkedin.com/in/thang-nguyen98/" target="_blank" className="hover:text-blue-500 dark:hover:text-lime-800"><AiFillLinkedin/></a>
+            <a href="https://github.com/Thangnguyenvn98" target="_blank" className="hover:text-blue-500 dark:hover:text-lime-800"><AiFillGithub/></a>
             </span>
           </div>
          
