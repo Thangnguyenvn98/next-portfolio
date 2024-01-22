@@ -20,7 +20,7 @@ export default function About() {
           </div>
           <div>
             <h2 className="text-md">OVERVIEW</h2>
-            <h3 className="font-bold text-blue-400 text-4xl">About Me</h3>
+            <h3 className="font-bold dark:text-green-500 text-blue-400 text-4xl">About Me</h3>
             <p className="break-words mt-4 font-light text-sm">I am currently a computer science student at Toronto Metropolitan University (Ryerson University) who is a skilled full-stack developer. Through experienced in my internship and projects, I have gained experiences in langauges such as JavaScript, PHP, Python. Experience in framework like React, MERN stack and developer tools like Git </p>
           </div>
         </div>

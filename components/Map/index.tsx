@@ -14,10 +14,12 @@ export default function Map(){
                 
               });
             const { Map } = await loader.importLibrary('maps') as google.maps.MapsLibrary
-
+            
+            const {Marker} = await loader.importLibrary('marker') as google.maps.MarkerLibrary
             const position = {
-                lat: 43.642693,
-                lng: -79.3871189
+    
+                lat: 43.65776723178754,
+                lng: -79.37880702314729
             }
 
             const mapOptions: google.maps.MapOptions = {
@@ -27,6 +29,10 @@ export default function Map(){
             }
 
             const map = new Map(mapRef.current as HTMLDivElement, mapOptions)
+            const marker = new Marker({
+                map: map,
+                position: position
+            })
         }
         initMap()
         console.log("initMap")

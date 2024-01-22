@@ -19,13 +19,13 @@ export default function Header(){
            <h2 className="text-6xl mt-5 md:mt-3">Full-Stack Developer 👋</h2>
            <p className="mt-10 font-light">Hi, I&#39;m Thang Nguyen. A hard-working and passionate software developer based in Toronto, Canada.</p>
           <span className="text-2xl py-5 flex mt-10 gap-4 justify-center lg:justify-start cursor-pointer ">
-            <a href="https://www.linkedin.com/in/thang-nguyen98/" className="hover:text-blue-500" target="_blank"><AiFillLinkedin/></a>
-            <a href="https://github.com/Thangnguyenvn98" className="hover:text-blue-500" target="_blank"><AiFillGithub/></a>
+            <a href="https://www.linkedin.com/in/thang-nguyen98/" className="hover:text-blue-500 dark:hover:text-green-500" target="_blank"><AiFillLinkedin/></a>
+            <a href="https://github.com/Thangnguyenvn98" className="hover:text-blue-500 dark:hover:text-green-500" target="_blank"><AiFillGithub/></a>
           </span>
           <div className="flex gap-10 justify-center lg:justify-start items-center mt-4 lg:mt-20">
          
             
-            <div className="flex hover:text-blue-500 items-center gap-2 bg-slate-300 rounded-md p-4">
+            <div className="flex hover:text-blue-500 dark:hover:text-green-500 items-center gap-2 bg-slate-300 rounded-md p-4">
              
               <a href="Thang_Resume_2024.pdf" download="thangnguyen-resume">Resume</a>
 
@@ -33,7 +33,7 @@ export default function Header(){
               <MdDownloadForOffline/>
             </div>
 
-            <div className="flex items-center gap-2 hover:text-blue-500">
+            <div className="flex items-center gap-2 hover:text-blue-500 dark:hover:text-green-500">
             <button onClick={()=> scrollToSection("project")}>Projects</button>
             <MdOutlineWork/>
             </div>
