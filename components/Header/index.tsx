@@ -9,18 +9,18 @@ import { scrollToSection } from "../Navbar";
 export default function Header(){
 
     return (
-          <div className="px-2 lg:px-8 relative">       {/* Container */}
-          <div className="flex relative h-screen justify-center gap-4 items-center"> {/* Content */}
-            <div className="flex flex-col-reverse lg:flex-row justify-center relative items-center gap-10"> {/* Hero main */}
+          <div className="px-2 lg:px-8 relative mt-20">       {/* Container */}
+          <div className="flex relative justify-center gap-4 items-center"> {/* Content */}
+            <div className="flex h-screen flex-col-reverse lg:flex-row justify-center relative items-center gap-10"> {/* Hero main */}
             <div className="font-bold flex-col text-center lg:text-start">{/* Hero text */}
-           <h2 className="text-6xl mt-5 md:mt-3">Full-Stack Developer 👋</h2>
-           <p className="mt-10 font-light text-2xl">Hi, I&#39;m Thang Nguyen. A hard-working and passionate software developer based in </p>
-           <a href="#map" className="text-2xl">Toronto, Canada 📍</a>
+           <h2 className="lg:text-6xl text-4xl mt-5 md:mt-3">Full-Stack Developer 👋</h2>
+           <p className="mt-10 font-light text-lg lg:text-2xl">Hi, I&#39;m Thang Nguyen. A hard-working and passionate software developer based in </p>
+           <a href="#map" className="lg:text-2xl text-lg">Toronto, Canada 📍</a>
           <span className="text-4xl py-5 flex mt-10 gap-4 justify-center lg:justify-start cursor-pointer ">
             <a href="https://www.linkedin.com/in/thang-nguyen98/" className="hover:text-blue-500 dark:hover:text-lime-800" target="_blank"><AiFillLinkedin/></a>
             <a href="https://github.com/Thangnguyenvn98" className="hover:text-blue-500 dark:hover:text-lime-800" target="_blank"><AiFillGithub/></a>
           </span>
-          <div className="flex gap-10 text-2xl justify-center lg:justify-start items-center mt-4 lg:mt-20">
+          <div className="flex gap-10 text-lg lg:text-2xl justify-center lg:justify-start items-center mt-4 lg:mt-20">
          
             
             <div className="flex hover:text-blue-500 dark:hover:text-lime-800 items-center gap-2 bg-slate-300 dark:bg-yellow-600 rounded-md p-4">
@@ -31,7 +31,7 @@ export default function Header(){
               <MdDownloadForOffline/>
             </div>
 
-            <div className="flex items-center gap-2 hover:text-blue-500 dark:hover:text-lime-800">
+            <div className="flex text-lg lg:text-2xl items-center gap-2 hover:text-blue-500 dark:hover:text-lime-800">
             <button onClick={()=> scrollToSection("project")}>Projects</button>
             <MdOutlineWork/>
             </div>

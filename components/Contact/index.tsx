@@ -28,7 +28,7 @@ export default function Contact(){
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
             <div className="mt-10">
                 <div className="flex flex-col gap-10 text-center items-center md:flex-row lg:flex-col">
-                    <article className="lg:p-20 py-5 w-full md:py-14 border-solid bg-transparent lg:w-full shadow-md shadow-black dark:shadow-white rounded-lg flex-grow">
+                    <article className="lg:p-20 py-5 md:py-14 border-solid bg-transparent lg:w-full shadow-md shadow-black dark:shadow-white rounded-lg flex-grow">
                         <div className="flex flex-col p-2 gap-6 justify-center items-center">
                         <TfiEmail size={42} className="text-blue-500 dark:text-green-500"/>
                         <h3 className="font-extrabold text-4xl">Email</h3>

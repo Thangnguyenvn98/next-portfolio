@@ -18,7 +18,7 @@ export default function Home() {
       <main className="bg-white dark:bg-black dark:text-white ">
   
       <Navbar dark={darkMode} setDark={setDarkMode}/>
-      <section className="min-h-screen w-full flex flex-col relative" id="home">
+      <section className="min-h-screen w-full flex flex-col relative mt-10 md:mt-20" id="home">
       
       <Header/>
       

@@ -7,7 +7,7 @@ interface Icon {
 
 export default function TechIcon ({src,alt} : Icon) {
     return (
-      <Image src={src} width={300} height={80} style={{width:"300px",height:"200px"}} alt={alt} className="hover:-translate-y-6 h-[80px]"/>
+      <Image src={src} width={300} height={80} style={{width:"300px",height:"200px"}} alt={alt} className="hover:-translate-y-6"/>
         
    
     )

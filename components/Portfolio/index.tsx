@@ -21,8 +21,8 @@ export default function Portfolio(){
              <div className="flex flex-col gap-4 relative">
           
           <div className="mt-20 flex flex-col">
-          <h2 className="font-bold text-6xl dark:text-green-500 text-blue-400">Projects</h2>
-          <p className="break-words font-light text-2xl mt-10">The following projects below showcase my skill and experience that can be applied in real worlds. Each project is briefly describe with its functionality and the source code for it linked to Github. It served as proof for my ability to solve complex problems and manage each projects effectively.</p>
+          <h2 className="font-bold text-4xl lg:text-6xl dark:text-green-500 text-blue-400">Projects</h2>
+          <p className="break-words font-light text-lg lg:text-2xl mt-10">The following projects below showcase my skill and experience that can be applied in real worlds. Each project is briefly describe with its functionality and the source code for it linked to Github. It served as proof for my ability to solve complex problems and manage each projects effectively.</p>
         
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
