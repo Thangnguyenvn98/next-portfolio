@@ -13,8 +13,9 @@ export default function About() {
       { src: 'https://skillicons.dev/icons?i=nextjs,tailwind,prisma,postgres', alt: 'stack-icon' },
     ]
     return (
-        <div className="flex flex-col relative items-center justify-center lg:h-[50rem] md:h-[80rem]">
-        <div className="grid gap-4 relative grid-cols-1 md:grid-cols-2 items-center p-10  ">
+      <div className="p-10">
+        <div className="flex flex-col relative items-center gap-4 justify-center">
+        <div className="grid gap-4 relative grid-cols-1 md:grid-cols-2 items-center">
           <div className="relative h-full rounded-xl overflow-hidden">
             <Image src={macbook} alt="macbook" sizes="(max-height: 300px)" objectFit="cover" fill />
           </div>
@@ -50,6 +51,8 @@ export default function About() {
           
         </div>
       </div>
+      </div>
+        
     )
 
 }
