@@ -1,9 +1,8 @@
 "use client"
 import { useState } from "react";
-import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdCloseCircle } from "react-icons/io";
-
+import ThemeToggle from "../ThemeToggle";
 
 interface NavBarProps {
     dark: boolean;
@@ -39,7 +38,7 @@ export default function Navbar({dark,setDark}: NavBarProps) {
             <button onClick={()=>scrollToSection("home")}>Thang.dev</button>
             </div>
             <div className="text-2xl">
-          {dark ?  <BsFillSunFill className="cursor-pointer hover:text-yellow-200 " onClick={()=> setDark(!dark)}/> : <BsFillMoonStarsFill className="cursor-pointer hover:text-yellow-20 md:static absolute left-[48%] top-[20px]" onClick={()=> setDark(!dark)}/>}
+             <ThemeToggle dark={dark} setDark={setDark}/>
         </div>
         
             <div onClick={()=>setOpenMenu(!openMenu)} className="absolute right-8 top-4 text-4xl cursor-pointer md:hidden">

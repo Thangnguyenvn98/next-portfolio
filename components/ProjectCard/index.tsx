@@ -15,7 +15,7 @@ interface ProjectCardProps {
 export default function ProjectCard({src,alt,title,description,technologies,github}:ProjectCardProps){
     return (
         <div className="md:hover:scale-[1.1] shadow-md shadow-black dark:shadow-white bg-neutral-400 dark:bg-gray-200 md:p-8 p-6 rounded-lg">
-        <div className="relative rounded-lg overflow-hidden h-[13rem] lg:h-[25rem] md:h-[20rem]">
+        <div className="relative rounded-lg overflow-hidden h-[16rem] lg:h-[25rem] md:h-[20rem]">
             <a href={github} target="_blank" className="absolute text-white p-2 z-30 right-2 top-2 rounded-full bg-black text-4xl"><FaGithub/></a>
         <Image src={src} alt={alt} fill objectFit="cover"/>
         </div>
