@@ -13,7 +13,7 @@ export default function About() {
       { src: 'https://skillicons.dev/icons?i=nextjs,tailwind,prisma,postgres', alt: 'stack-icon' },
     ]
     return (
-      <div className="p-10">
+      <div className="p-10 mt-16">
         <div className="flex flex-col relative items-center gap-4 justify-center">
         <div className="grid gap-4 relative grid-cols-1 md:grid-cols-2 items-center">
           <div className="relative h-full rounded-xl overflow-hidden">
@@ -26,23 +26,23 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 items-center justify-center mt-20 text-center ">
-          <h2 className="md:text-2xl text-lg font-semibold text-blue-400">WHAT SKILLS I HAVE</h2>
-          <h2 className="md:text-6xl text-xl font-bold">Tech Stack</h2>
-          <div className="mt-8 md:flex-row flex gap-8 justify-center">
+        <div className="flex flex-col gap-4 items-center justify-center mt-20 text-center w-full ">
+          <h2 className="md:text-2xl text-xl font-semibold text-blue-400">WHAT SKILLS I HAVE</h2>
+          <h2 className="md:text-6xl text-4xl font-bold">Tech Stack</h2>
+          <div className="mt-8 md:flex-row lg:flex lg:flex-row flex-col gap-8 justify-center">
           <ul >
-                <li className=""> 
+                <li className="relative h-20 w-60 "> 
                   <TechIcon src={techIcons[0].src} alt={techIcons[0].alt}/>
                   </li>
-                <li className="mt-10">
+                <li className="mt-10 relative h-20 w-60 ">
                 <TechIcon src={techIcons[1].src} alt={techIcons[1].alt}/>
                    </li>
           </ul>
               <ul >
-                <li>
+                <li className="relative h-20 w-60 mt-10 lg:mt-0">
                 <TechIcon src={techIcons[2].src} alt={techIcons[3].alt}/>
                    </li>
-                <li className="mt-10">
+                <li className="mt-10 relative h-20 w-60">
                 <TechIcon src={techIcons[3].src} alt={techIcons[3].alt}/>
                    </li>
               </ul>     

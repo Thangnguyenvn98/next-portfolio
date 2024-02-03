@@ -16,9 +16,9 @@ export default function Header(){
            <h2 className="lg:text-6xl text-4xl mt-5 md:mt-3">Full-Stack Developer 👋</h2>
            <p className="mt-10 font-light text-lg lg:text-2xl">Hi, I&#39;m Thang Nguyen. A hard-working and passionate software developer based in </p>
            <a href="#map" className="lg:text-2xl text-lg">Toronto, Canada 📍</a>
-          <span className="text-4xl py-5 flex mt-10 gap-4 justify-center lg:justify-start cursor-pointer ">
-            <a href="https://www.linkedin.com/in/thang-nguyen98/" className="hover:text-blue-500 dark:hover:text-lime-800" target="_blank"><AiFillLinkedin/></a>
-            <a href="https://github.com/Thangnguyenvn98" className="hover:text-blue-500 dark:hover:text-lime-800" target="_blank"><AiFillGithub/></a>
+          <span className="text-4xl py-5  flex mt-10 gap-4 justify-center lg:justify-start cursor-pointer ">
+            <a href="https://www.linkedin.com/in/thang-nguyen98/" className="hover:text-blue-500 dark:hover:text-lime-800 border bg-sky-200 p-2 rounded-full dark:bg-green-300" target="_blank"><AiFillLinkedin/></a>
+            <a href="https://github.com/Thangnguyenvn98" className="hover:text-blue-500 dark:hover:text-lime-800 border bg-sky-200 p-2 rounded-full dark:bg-green-300" target="_blank"><AiFillGithub/></a>
           </span>
           <div className="flex gap-10 text-lg lg:text-2xl justify-center lg:justify-start items-center mt-4 lg:mt-20">
          

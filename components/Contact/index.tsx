@@ -20,10 +20,10 @@ export default function Contact(){
         e.currentTarget.reset();
       };}
     return (
-        <div className="p-10 text-center">
+        <div className="p-8 text-center">
           
-            <h3 className="text-xl mt-20">GET IN TOUCH</h3>
-            <h1 className="text-6xl font-extrabold text-blue-400 dark:text-green-500">Contact</h1>
+            <h2 className="lg:text-xl text-md mt-20">GET IN TOUCH</h2>
+            <h1 className="lg:text-6xl text-4xl font-extrabold text-blue-400 dark:text-green-500">Contact</h1>
             
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
             <div className="mt-10">
