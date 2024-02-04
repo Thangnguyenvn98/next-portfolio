@@ -1,27 +1,29 @@
-"use client"
+'use client'
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdCloseCircle } from "react-icons/io";
 import ThemeToggle from "../ThemeToggle";
+import {motion} from "framer-motion"
+import Sidebar from "../Sidebar/sidebar";
 
 interface NavBarProps {
     dark: boolean;
     setDark:React.Dispatch<React.SetStateAction<boolean>>;
   }
-export  const scrollToSection = (id: string) => {
+// export  const scrollToSection = (id: string) => {
     
-    const width = window.innerWidth
-    let offset = width <= 768 ? 70 : 130
+//     const width = window.innerWidth
+//     let offset = width <= 768 ? 70 : 130
   
-    const targetSection = document.getElementById(id);
-    if (targetSection) {
+//     const targetSection = document.getElementById(id);
+//     if (targetSection) {
   
-      window.scrollTo({
-        top: targetSection.offsetTop - offset,
-        behavior: "smooth",
-      });
-    }
-    }
+//       window.scrollTo({
+//         top: targetSection.offsetTop - offset,
+//         behavior: "smooth",
+//       });
+//     }
+//     }
 export default function Navbar({dark,setDark}: NavBarProps) {
     const [openMenu, setOpenMenu] = useState(false)
 
@@ -32,33 +34,26 @@ export default function Navbar({dark,setDark}: NavBarProps) {
     {name:"contact",section:"Contact"}]
 
     return (
-        <nav id="navbar" className=" bg-white z-50 top-0 left-0 md:shadow-md md:shadow-slate-400 fixed w-full dark:shadow-slate-200 dark:bg-black dark:text-white">
-          <div className="flex items-center relative justify-between py-4 px-7">
-            <div className="cursor-pointer text-2xl font-bold flex items-center ">
-            <button onClick={()=>scrollToSection("home")}>Thang.dev</button>
-            </div>
-            <div className="text-2xl">
+        <div id="navbar" className=" bg-white text-black h-[100px] md:shadow-md md:shadow-slate-400 dark:shadow-slate-200 dark:bg-black dark:text-white">
+             <Sidebar/>
+          <div className="flex ml-28 h-full justify-end md:justify-between items-center max-w-screen-2xl">
+        
+            <motion.span initial={{opacity: 0, scale:0.5}} animate={{opacity: 1, scale:1}} transition={{duration:0.5}} className="hidden md:block font-bold">Thang.dev</motion.span>
+   
+           
+            <div className="text-2xl text-black flex gap-[20px] mr-36">
              <ThemeToggle dark={dark} setDark={setDark}/>
         </div>
         
-            <div onClick={()=>setOpenMenu(!openMenu)} className="absolute right-8 top-4 text-4xl cursor-pointer md:hidden">
+            {/* <div onClick={()=>setOpenMenu(!openMenu)} className="absolute right-8 top-4 text-4xl cursor-pointer md:hidden">
           {openMenu ? <IoMdCloseCircle/> : <GiHamburgerMenu/> }
-        </div>
+        </div> */}
         
-                <ul className={` dark:text-black dark:md:from-transparent text-xl dark:md:text-white dark:from-slate-100 dark:via-slate-300 dark:to-slate-500 font-semibold md:flex md:items-center md:gap-6 md:static md:z-auto absolute top-20 rounded-lg bg-gradient-to-r from-stone-600 via-stone-800 to-stone-950 p-7 text-white md:text-black  md:from-transparent md:w-auto transition-all duration-500 ease-out ${openMenu ? 'right-[40px]' : 'right-[-490px]'} `} >
-        
-                    {sections.map((section,index) => (
-                      <li key={index} className="hover:text-blue-500 dark:hover:text-lime-800 bg-">
-                        <button onClick={()=>scrollToSection(section.name)}>{section.section}</button>
-                      </li>
-                    ))}
-                    
-                   
-                </ul>
+         
             
           </div>
        
         
-      </nav>
+      </div>
     )
 }

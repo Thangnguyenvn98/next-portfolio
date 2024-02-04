@@ -10,7 +10,7 @@ interface ThemeToggleProps {
 }
 export default function ThemeToggle({setDark,dark}:ThemeToggleProps){
     return (
-        <button className='cursor-pointer hover:text-yellow-100 text-black md:static absolute left-[48%] top-[20px] dark:text-white dark:hover:text-yellow-200' onClick={()=>setDark(!dark)}>
+        <button className='cursor-pointer hover:text-yellow-100 text-black dark:text-white dark:hover:text-yellow-200' onClick={()=>setDark(!dark)}>
             {dark ? <BsFillSunFill/> : <BsFillMoonStarsFill/>}
         </button>
     

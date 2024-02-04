@@ -12,6 +12,7 @@
     "@emailjs/browser": "^3.12.1",
     "@googlemaps/js-api-loader": "^1.16.2",
     "email-js": "^2.0.2",
+    "framer-motion": "^10.16.4",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",

@@ -4,7 +4,7 @@ import Image from "next/image"
 import portrait from "../../public/IMG_1450.png"
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
 import { MdDownloadForOffline, MdOutlineWork } from "react-icons/md";
-import { scrollToSection } from "../Navbar";
+
 
 export default function Header(){
 
@@ -32,7 +32,7 @@ export default function Header(){
             </div>
 
             <div className="flex text-lg lg:text-2xl items-center gap-2 hover:text-blue-500 dark:hover:text-lime-800">
-            <button onClick={()=> scrollToSection("project")}>Projects</button>
+            <button onClick={()=> {}}>Projects</button>
             <MdOutlineWork/>
             </div>
           </div>

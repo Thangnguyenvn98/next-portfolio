@@ -39,8 +39,8 @@ export default function Contact(){
                      
                     </article>
                    
-                   <Map/>
-                   
+                   {/* <Map/>
+                    */}
                     
                 </div>
             

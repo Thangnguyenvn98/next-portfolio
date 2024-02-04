@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { useState } from "react";
 import Navbar from "../components/Navbar";
@@ -15,28 +15,28 @@ export default function Home() {
   return (
     <div className={darkMode ? "dark" : ""}>
     
-      <main className="bg-white dark:bg-black dark:text-white ">
-  
-      <Navbar dark={darkMode} setDark={setDarkMode}/>
-      <section className="min-h-screen w-full flex flex-col relative mt-10 md:mt-20" id="home">
       
-      <Header/>
+  
+      <section id="home">
+      <Navbar dark={darkMode} setDark={setDarkMode}/>
+
+      {/* <Header/> */}
       
        
       </section>
       <section id="about" className="px-10 relative">
-       <About/>
+       {/* <About/> */}
       </section>
 
       <section className="px-10 relative" id="project">
-        <Portfolio/>
+        {/* <Portfolio/> */}
       </section>
 
       <section id="contact" className="px-10 relative">
-        <Contact/>
+        {/* <Contact/> */}
       </section>
-      <Footer/>
-      </main>
+      {/* <Footer/> */}
+     
   
     </div>
   );
