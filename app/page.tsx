@@ -7,6 +7,8 @@ import About from "../components/About";
 import Footer from "../components/Footer";
 import Portfolio from "../components/Portfolio"
 import Contact from "@/components/Contact";
+import Hero from "@/components/Hero/hero";
+import Parallax from "@/components/Parallax/parallax";
 
 
 
@@ -19,20 +21,28 @@ export default function Home() {
   
       <section id="home">
       <Navbar dark={darkMode} setDark={setDarkMode}/>
-
+      <Hero/>
       {/* <Header/> */}
       
        
       </section>
-      <section id="about" className="px-10 relative">
-       {/* <About/> */}
+      <section id="about">
+       <Parallax type="about"/>
+     
+      </section>
+      <section>
+        <About/>
+      </section>
+      <section id="project" >
+       <Parallax type="project"/>
+     
       </section>
 
-      <section className="px-10 relative" id="project">
-        {/* <Portfolio/> */}
+      <section className="relative" >
+        <Portfolio/>
       </section>
 
-      <section id="contact" className="px-10 relative">
+      <section id="contact">
         {/* <Contact/> */}
       </section>
       {/* <Footer/> */}

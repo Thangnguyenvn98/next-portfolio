@@ -13,15 +13,15 @@ export default function About() {
       { src: 'https://skillicons.dev/icons?i=nextjs,tailwind,prisma,postgres', alt: 'stack-icon' },
     ]
     return (
-      <div className="p-10 mt-16">
-        <div className="flex flex-col relative items-center gap-4 justify-center">
-        <div className="grid gap-4 relative grid-cols-1 md:grid-cols-2 items-center">
+      <div className="p-4 h-full md:mt-10 lg:mt-0 flex flex-col justify-center">
+        <div className="flex h-full flex-col p-4 relative items-center gap-4 justify-center">
+        <div className="grid space-x-10 p-10  relative grid-cols-1 md:grid-cols-2 items-center">
           <div className="relative h-full rounded-xl overflow-hidden">
             <Image src={macbook} alt="macbook" sizes="(max-height: 300px)" objectFit="cover" fill />
           </div>
           <div className="flex flex-col gap-4 p-4">
-            <h2 className="md:text-2xl text-md font-semibold">OVERVIEW</h2>
-            <h3 className="font-bold dark:text-green-500 text-blue-400 text-4xl lg:text-6xl">About Me</h3>
+            <h2 className="font-bold dark:text-green-500 text-blue-400 text-4xl lg:text-6xl">OVERVIEW</h2>
+
             <p className="break-words mt-4 font-light md:text-2xl text-lg">I am currently a computer science student at Toronto Metropolitan University (Ryerson University) who is a skilled full-stack developer. Through experienced in my internship and projects, I have gained experiences in languages such as JavaScript, PHP, Python. Experience in framework like React, MERN stack and developer tools like Git. </p>
           </div>
         </div>

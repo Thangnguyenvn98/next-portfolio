@@ -1,9 +1,9 @@
 "use client"
 
 import Image from "next/image"
-import portrait from "../../public/IMG_1450.png"
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
 import { MdDownloadForOffline, MdOutlineWork } from "react-icons/md";
+import portrait from "../../public/IMG_1450.png"
 
 
 export default function Header(){
