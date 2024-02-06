@@ -7,6 +7,7 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
 import { MdDownloadForOffline, MdOutlineWork } from "react-icons/md"
 import { motion } from "framer-motion"
 import scroll from "../../public/scroll-black.png"
+import { useEffect, useState } from "react"
 
 const textVariants = {
   initial: {
@@ -23,7 +24,7 @@ const textVariants = {
   },
   scrollButton: {
     opacity:0,
-    y:10,
+    y:15,
     transition: {
       duration:2,
       repeat:Infinity
@@ -33,20 +34,31 @@ const textVariants = {
 
 
 
+
 const Hero = () => {
+
+  const [isMounted,setIsMounted] =useState(false)
+  useEffect(() => {
+    setIsMounted(true)
+  },[])
+
+  if (!isMounted) {
+    return null;
+  }
   return (
-    <div className="h-[calc(100vh-100px)] overflow-hidden relative  ">
-      <div className="ml-[450px] max-w-[1366px] h-full ">
-      <motion.div initial="initial" animate="animate" variants={textVariants} className="flex items-start flex-col h-full gap-10 md:w-[40%] justify-center lg:w-[50%]">
+    <div className="h-[calc(100vh-100px)] overflow-hidden relative ">
+      <div className="lg:ml-[20%] ml-[30%] lg:max-w-[1366px] h-full flex flex-col justify-between lg:flex-row lg:justify-between space-x-10 p-4 ">
+      <motion.div initial="initial" animate="animate" variants={textVariants} className="flex lg:items-start flex-col lg:h-full gap-10 w-full h-1/2 items-center text-center lg:text-left md:w-[40%] justify-center lg:w-[60%]">
           <motion.h2 variants={textVariants} className="font-semibold text-4xl">THANG NGUYEN</motion.h2>
-          <motion.h1 variants={textVariants} className="font-bold text-6xl">Full-Stack Developer 👋</motion.h1>
+          <motion.h1 variants={textVariants} className="font-bold text-6xl">Full-Stack Developer 👋 </motion.h1>
+    
         
           <motion.p variants={textVariants} className="mt-10 font-light text-lg lg:text-2xl">Hi, I&#39;m Thang Nguyen. A hard-working and passionate software developer based in  <a href="#map" className="lg:text-2xl text-lg">Toronto, Canada 📍</a> </motion.p>
          
          
      
           <motion.div variants={textVariants} className="flex flex-col gap-10">
-            <motion.div variants={textVariants} className="flex space-x-6 ">
+            <motion.div variants={textVariants} className="flex space-x-6 lg:justify-start justify-center">
             <motion.a variants={textVariants} href="https://www.linkedin.com/in/thang-nguyen98/" className="hover:text-blue-500 dark:hover:text-lime-800 border bg-sky-200 p-2 rounded-full dark:bg-green-300" target="_blank"><AiFillLinkedin size={30}/></motion.a>
             <motion.a variants={textVariants} href="https://github.com/Thangnguyenvn98" className="hover:text-blue-500 dark:hover:text-lime-800 border bg-sky-200 p-2 rounded-full dark:bg-green-300" target="_blank"><AiFillGithub size={30}/></motion.a>
             </motion.div>
@@ -68,17 +80,18 @@ const Hero = () => {
 
            </motion.div>
 
-            <motion.div animate="scrollButton" variants={textVariants} className="relative z-30 left-[-20%] w-[200px] h-[200px]">
+            <motion.div animate="scrollButton" variants={textVariants} className="relative z-30 lg:left-[-13%] w-[30%] h-[10%]">
             <Image alt="scroll" src={scroll}  />
             </motion.div>
            
 
         </motion.div>
+        <div className="lg:relative absolute top-0 h-[40%] w-[50%] lg:top-[17%] lg:h-[50%] lg:w-[50%] rounded-full overflow-hidden">
+            <Image src={portrait} className="object-cover" fill alt="hero"/>
+      </div>
       </div>
     
-        <div className="absolute top-[28%] right-10 h-[400px] w-[400px] rounded-full overflow-hidden lg:right-20  ">
-            <Image src={portrait} className="object-cover" fill alt="hero"/>
-        </div>
+     
         
     </div>
   )

@@ -26,21 +26,15 @@ export default function Home() {
       
        
       </section>
-      <section id="about">
-       <Parallax type="about"/>
      
-      </section>
-      <section>
+      <section id="about">
         <About/>
       </section>
-      <section id="project" >
-       <Parallax type="project"/>
-     
-      </section>
+      
 
-      <section className="relative" >
-        <Portfolio/>
-      </section>
+     
+        <Portfolio />
+     
 
       <section id="contact">
         {/* <Contact/> */}
