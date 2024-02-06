@@ -46,11 +46,11 @@ const Hero = () => {
     return null;
   }
   return (
-    <div className="h-[calc(100vh-100px)] overflow-hidden relative ">
-      <div className="lg:ml-[20%] ml-[30%] lg:max-w-[1366px] h-full flex flex-col justify-between lg:flex-row lg:justify-between space-x-10 p-4 ">
-      <motion.div initial="initial" animate="animate" variants={textVariants} className="flex lg:items-start flex-col lg:h-full gap-10 w-full h-1/2 items-center text-center lg:text-left md:w-[40%] justify-center lg:w-[60%]">
-          <motion.h2 variants={textVariants} className="font-semibold text-4xl">THANG NGUYEN</motion.h2>
-          <motion.h1 variants={textVariants} className="font-bold text-6xl">Full-Stack Developer 👋 </motion.h1>
+    <div className="h-[calc(100vh-100px)] overflow-hidden relativ ">
+      <div className="lg:ml-[20%] lg:max-w-[1366px] h-full flex flex-col space-y-10 justify-between lg:flex-row lg:justify-between lg:space-x-10 p-4 mt-20">
+      <motion.div initial="initial" animate="animate" variants={textVariants} className="mt-20 flex lg:items-start flex-col lg:h-full gap-10 w-full h-1/2 items-center text-center lg:text-left md:w-[40%] justify-center lg:w-[60%]">
+          <motion.h2 variants={textVariants} className="font-semibold text-4xl lg:text-4xl">THANG NGUYEN</motion.h2>
+          <motion.h1 variants={textVariants} className="font-bold text-md lg:text-6xl">Full-Stack Developer 👋 </motion.h1>
     
         
           <motion.p variants={textVariants} className="mt-10 font-light text-lg lg:text-2xl">Hi, I&#39;m Thang Nguyen. A hard-working and passionate software developer based in  <a href="#map" className="lg:text-2xl text-lg">Toronto, Canada 📍</a> </motion.p>
@@ -86,7 +86,7 @@ const Hero = () => {
            
 
         </motion.div>
-        <div className="lg:relative absolute top-0 h-[40%] w-[50%] lg:top-[17%] lg:h-[50%] lg:w-[50%] rounded-full overflow-hidden">
+        <div className="lg:relative  hidden lg:block top-0 h-[40%] w-[50%] lg:top-[17%] lg:h-[50%] lg:w-[50%] rounded-full overflow-hidden">
             <Image src={portrait} className="object-cover" fill alt="hero"/>
       </div>
       </div>

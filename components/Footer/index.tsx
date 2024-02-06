@@ -5,7 +5,7 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 export default function Footer(){
     const currentDate = new Date();
     return (
-        <footer className="px-10 bg-neutral-400 dark:bg-gray-200 w-full py-10 mt-10">
+        <footer className="px-10 bg-neutral-400 dark:bg-gray-200 w-full py-10 mt-10 h-full">
         <div className="px-10 text-white font-bold mt-8 dark:text-black">
           <div className="flex-col text-xl md:flex md:flex-row md:justify-between gap-4 justify-center text-center md:items-center">
             <p>Copyright &#169; {currentDate.getFullYear()}. All rights are reserved. </p>

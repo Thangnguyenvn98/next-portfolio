@@ -20,19 +20,19 @@ const Single = ({ item }) => {
     const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
     return (
-        <section id="project" >
+        <section id="project" className="dark:bg-black dark:text-white" >
           <div className="flex items-center justify-center w-full h-full overflow-hidden">
-            <div className="max-w-[1366px] h-full flex justify-center items-center gap-10">
+            <div className="max-w-[1366px] p-10 h-full flex justify-center items-center gap-10">
               <div className="flex-1 h-50%" ref={ref}>
-                <div className="w-full h-full relative">
+                <div className="w-full h-full relative overflow-hidden">
                     <Image src={item.src} alt={item.alt} className="object-cover"/>
                 </div>
                 
               </div>
               <motion.div className="flex flex-1 flex-col gap-10" style={{y}}>
-                <h2 className="font-bold text-6xl">{item.title}</h2>
-                <p className="font-light text-xl">{item.description}</p>
-                <button className="border-none text-lg  p-10 w-[200px] cursor-pointer rounded-md bg-blue-400">See Demo</button>
+                <h2 className="font-bold lg:text-6xl">{item.title}</h2>
+                <p className="font-light lg:text-2xl">{item.description}</p>
+                <button className="border-none text-2xl p-10 w-[200px] cursor-pointer rounded-md bg-blue-400">See Demo</button>
               </motion.div>
             </div>
           </div>
@@ -70,7 +70,7 @@ export default function Portfolio(){
      <div ref={ref} className="relative">
         <div className="sticky top-0 left-0 z-10 text-center text-blue-400 text-6xl font-bold pt-20">
             <h1>Featured Works</h1>
-            <motion.div style={{scaleX}} className="h-[10px] bg-black"></motion.div>
+            <motion.div style={{scaleX}} className="h-[10px] bg-black dark:bg-white"></motion.div>
         </div>
         {projects.map((project)=>(
            <Single item={project} key={project.alt}/>

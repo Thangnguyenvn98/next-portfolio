@@ -2,13 +2,11 @@
 
 import { useState } from "react";
 import Navbar from "../components/Navbar";
-import Header from "../components/Header";
 import About from "../components/About";
 import Footer from "../components/Footer";
 import Portfolio from "../components/Portfolio"
 import Contact from "@/components/Contact";
 import Hero from "@/components/Hero/hero";
-import Parallax from "@/components/Parallax/parallax";
 
 
 
@@ -36,10 +34,11 @@ export default function Home() {
         <Portfolio />
      
 
-      <section id="contact">
-        {/* <Contact/> */}
+      <section id="contact" className="dark:bg-black">
+        <Contact/>
+        <Footer/>
       </section>
-      {/* <Footer/> */}
+     
      
   
     </div>

@@ -21,22 +21,27 @@ export default function Navbar({dark,setDark}: NavBarProps) {
     {name:"contact",section:"Contact"}]
 
     return (
-        <div id="navbar" className=" bg-white text-black h-[100px] md:shadow-md md:shadow-slate-400 dark:shadow-slate-200 dark:bg-black dark:text-white">
+        <div id="navbar" className="text-black h-[100px] dark:bg-black dark:text-white">
              <Sidebar/>
-          <div className="flex ml-28 h-full justify-end md:justify-between lg:items-center max-w-screen-2xl lg:p-0 p-10">
-        
-            <motion.span initial={{opacity: 0, scale:0.5}} animate={{opacity: 1, scale:1}} transition={{duration:0.5}} className="hidden md:block font-bold">Thang.dev</motion.span>
+          <div className="fixed top-[3%] left-[10%] md:left-[20%] cursor-pointer z-[999]">
+            
+            <motion.a href="#home" initial={{opacity: 0, scale:0.5}} animate={{opacity: 1, scale:1}} transition={{duration:0.5}} className="hidden md:inline-block text-2xl font-bold">
+              Thang.dev
+              </motion.a>
    
+            
+          
            
-            <div className="text-2xl text-black flex gap-[20px] mr-36">
-             <ThemeToggle dark={dark} setDark={setDark}/>
-        </div>
+            
         
       
         
          
             
           </div>
+          <motion.div initial={{opacity: 0, scale:0.5}} animate={{opacity: 1, scale:1}} transition={{duration:0.5}} className="text-2xl text-black fixed top-[4%] md:top-[3%] z-[999] left-[45%] md:left-[60%]">
+             <ThemeToggle dark={dark} setDark={setDark}/>
+            </motion.div>
        
         
       </div>

@@ -20,12 +20,12 @@ export default function Contact(){
         e.currentTarget.reset();
       };}
     return (
-        <div className="p-8 text-center">
+        <div className="p-8 text-center h-[80%] dark:text-white">
           
             <h2 className="lg:text-xl text-md mt-20">GET IN TOUCH</h2>
             <h1 className="lg:text-6xl text-4xl font-extrabold text-blue-400 dark:text-green-500">Contact</h1>
             
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8  lg:h-[80%]">
             <div className="mt-10">
                 <div className="flex flex-col gap-10 text-center items-center md:flex-row lg:flex-col">
                     <article className="lg:p-20 py-5 md:py-14 border-solid bg-transparent lg:w-full shadow-md shadow-black dark:shadow-white rounded-lg flex-grow">
