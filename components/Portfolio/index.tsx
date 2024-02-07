@@ -1,39 +1,54 @@
 "use client"
-import ProjectCard from "../ProjectCard";
 import portfolio1 from "../../public/portfolio1.png"
 import portfolio2 from "../../public/portfolio2.png"
 import portfolio3 from "../../public/portfolio3.png"
 import portfolio4 from "../../public/portfolio4.png"
 import portfolio5 from "../../public/portfolio5.png"
 import {motion, useScroll, useSpring, useTransform} from "framer-motion"
-import { useRef } from "react";
-import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import Image, { StaticImageData } from "next/image";
+import Reveal from "../Reveal/reveal";
+
+interface itemsProps {
+  src:StaticImageData;
+  alt:string;
+  description:string;
+  title:string;
+  technologies:string;
+  github:string;
+}
 
 
-const Single = ({ item }) => {
-    const ref = useRef();
-  
-    const { scrollYProgress } = useScroll({
-      target: ref,
-    });
-  
-    const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+const Single = ({ item }:{item:itemsProps}) => {
+ 
 
     return (
-        <section id="project" className="dark:bg-black dark:text-white" >
-          <div className="flex items-center justify-center w-full h-full overflow-hidden">
-            <div className="max-w-[1366px] p-10 h-full flex justify-center items-center gap-10">
-              <div className="flex-1 h-50%" ref={ref}>
+        <section id="project" className="dark:bg-black dark:text-white relative  " >
+          <div className="md:flex-row flex flex-col items-center justify-center w-full h-full gap-y-10 overflow-hidden relative top-[10rem] md:top-0">
+            <div className="max-w-[1366px] p-10 h-full flex flex-col justify-center items-center md:gap-10 overflow-hidden gap-10">
+              <div className="flex-1 md:h-[50%] h-[4 0%]" >
                 <div className="w-full h-full relative overflow-hidden">
                     <Image src={item.src} alt={item.alt} className="object-cover"/>
                 </div>
                 
               </div>
-              <motion.div className="flex flex-1 flex-col gap-10" style={{y}}>
-                <h2 className="font-bold lg:text-6xl">{item.title}</h2>
-                <p className="font-light lg:text-2xl">{item.description}</p>
-                <button className="border-none text-2xl p-10 w-[200px] cursor-pointer rounded-md bg-blue-400">See Demo</button>
-              </motion.div>
+              <div className="flex flex-1 flex-col gap-10" >
+                <Reveal>
+                <h2 className="font-bold text-2xl lg:text-6xl">{item.title}</h2>
+                </Reveal>
+                <Reveal>
+                <p className="font-light lg:text-2xl text-slate-300">{item.description}</p>
+                </Reveal>
+                <Reveal>
+                <p className="font-light lg:text-2xl text-blue-600 dark:text-green-500">{item.technologies}</p>
+                </Reveal>
+                  <Reveal>
+                  <button className="border-none text-2xl p-10 w-[200px] cursor-pointer rounded-md bg-slate-300">
+                    <a href={item.github} target='_blank'>See Code</a>
+                  </button>
+                  </Reveal>
+              
+              </div>
             </div>
           </div>
         </section>
@@ -41,6 +56,7 @@ const Single = ({ item }) => {
     };
 
 export default function Portfolio(){
+    const [isMounted,setIsMounted] = useState(false)
 
     const ref = useRef();
 
@@ -64,16 +80,27 @@ export default function Portfolio(){
 
 
     ]
+
+    useEffect(()=>{
+      setIsMounted(true)
+    },[])
+
+    if(!isMounted) {
+      return null
+    }
    
 
     return(
-     <div ref={ref} className="relative">
-        <div className="sticky top-0 left-0 z-10 text-center text-blue-400 text-6xl font-bold pt-20">
-            <h1>Featured Works</h1>
+     <div ref={ref} className="relative dark:bg-black">
+        <div className="sticky top-0 left-0 z-10 text-center text-blue-400 lg:text-6xl text-4xl font-bold pt-20">
+            <h1 className="dark: text-green-500">Featured Works</h1>
             <motion.div style={{scaleX}} className="h-[10px] bg-black dark:bg-white"></motion.div>
         </div>
         {projects.map((project)=>(
-           <Single item={project} key={project.alt}/>
+        
+              <Single item={project} key={project.alt}/>
+         
+       
         ))}
      </div>
      

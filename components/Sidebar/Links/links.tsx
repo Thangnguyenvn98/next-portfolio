@@ -34,7 +34,7 @@ const Links = () => {
   {name:"project",section:"Projects"},
   {name:"contact",section:"Contact"}]
   return (
-    <motion.div variants={variants} className='flex z-50 flex-col text-white absolute w-full h-full items-center justify-center gap-10 '>
+    <motion.div variants={variants} className='flex z-50 dark:bg-white flex-col text-white absolute w-full h-full items-center justify-center gap-10 dark:text-black '>
       {sections.map ((section) => (
         <motion.a variants={itemVariants}  whileHover={{scale:1.1}} whileTap={{scale:0.95}}   className='cursor-pointer text-4xl' key={section.name} href={`#${section.name}`}>{section.section}</motion.a>
       ))}

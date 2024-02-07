@@ -44,8 +44,8 @@ const Sidebar = () => {
         <motion.div className="fixed z-[999] md:w-[400px] bg-black top-0 left-0 bottom-0 w-[200px]" variants={variants}>
             <Links/>
         </motion.div>
-        <button onClick={()=>setOpen((prev)=> !prev)} className="z-[999] fixed bg-transparent border-none rounded-xl w-[80px] h-[80px] top-[10px]  text-white left-[35px] cursor-pointer ">
-            { open ? <IoMdCloseCircle className="  text-white" size={30}/> : <GiHamburgerMenu size={30}/> }
+        <button onClick={()=>setOpen((prev)=> !prev)} className="z-[999] fixed dark:bg-transparent dark:text-black bg-transparent border-none rounded-xl w-[80px] h-[80px] top-[10px]  text-white left-[35px] cursor-pointer ">
+            { open ? <IoMdCloseCircle className="  text-white dark:text-black" size={30}/> : <GiHamburgerMenu className="dark:text-black" size={30}/> }
         </button>
     </motion.div>
   )

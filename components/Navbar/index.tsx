@@ -21,9 +21,9 @@ export default function Navbar({dark,setDark}: NavBarProps) {
     {name:"contact",section:"Contact"}]
 
     return (
-        <div id="navbar" className="text-black h-[100px] dark:bg-black dark:text-white">
+        <div id="navbar" className="text-black h-[100px]  dark:text-white">
              <Sidebar/>
-          <div className="fixed top-[3%] left-[10%] md:left-[20%] cursor-pointer z-[999]">
+          <div className="fixed top-[3%] left-[10%] md:left-[10%] cursor-pointer z-[999]">
             
             <motion.a href="#home" initial={{opacity: 0, scale:0.5}} animate={{opacity: 1, scale:1}} transition={{duration:0.5}} className="hidden md:inline-block text-2xl font-bold">
               Thang.dev
@@ -39,7 +39,7 @@ export default function Navbar({dark,setDark}: NavBarProps) {
          
             
           </div>
-          <motion.div initial={{opacity: 0, scale:0.5}} animate={{opacity: 1, scale:1}} transition={{duration:0.5}} className="text-2xl text-black fixed top-[4%] md:top-[3%] z-[999] left-[45%] md:left-[60%]">
+          <motion.div initial={{opacity: 0, scale:0.5}} animate={{opacity: 1, scale:1}} transition={{duration:0.5}} className="text-2xl text-black lg:top-[2%] fixed top-[5%] md:top-[3%] z-[999] left-[72%] md:left-[80%]">
              <ThemeToggle dark={dark} setDark={setDark}/>
             </motion.div>
        

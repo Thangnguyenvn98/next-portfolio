@@ -17,7 +17,7 @@ export default function Home() {
     
       
   
-      <section id="home">
+      <section id="home" className="dark:bg-black dark:text-white">
       <Navbar dark={darkMode} setDark={setDarkMode}/>
       <Hero/>
       {/* <Header/> */}
@@ -25,7 +25,7 @@ export default function Home() {
        
       </section>
      
-      <section id="about">
+      <section id="about" className="dark:bg-black dark:text-white">
         <About/>
       </section>
       
@@ -34,10 +34,12 @@ export default function Home() {
         <Portfolio />
      
 
-      <section id="contact" className="dark:bg-black">
+      <section id="contact" className="dark:bg-black lg:h-[100vh] ">
         <Contact/>
         <Footer/>
+
       </section>
+
      
      
   
