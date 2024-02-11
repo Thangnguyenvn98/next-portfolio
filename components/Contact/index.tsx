@@ -59,7 +59,7 @@ export default function Contact(){
                                 </Reveal>
                             </div>
                         </article>
-                        <div className='w-auto h-full rounded-lg'>
+                        <div className='w-full h-full rounded-lg'>
                             <Map/>
                         </div>
                     </div>

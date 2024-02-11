@@ -49,8 +49,8 @@ const Hero = () => {
     return null;
   }
   return (
-    <div className="min-[1500px]:h-[calc(100vh-100px)] min-h-screen overflow-hidden">
-      <div className="min-[1500px]:ml-[20%] min-[1500px]:max-w-[1366px] min-[1500px]:h-full min-h-screen flex flex-col-reverse justify-between items-center min-[1500px]:flex-row min-[1500px]:justify-between min-[1500px]:space-x-10 min-[1500px]:mt-20">
+    <div className="min-[1500px]:min-h-screen min-h-screen overflow-hidden">
+      <div className="min-[1500px]:ml-[20%] min-[1500px]:max-w-[1366px] min-[1500px]:h-full min-h-screen flex flex-col-reverse justify-between items-center min-[1500px]:flex-row min-[1500px]:justify-between min-[1500px]:space-x-10 ">
       <div className="flex min-[1500px]:items-start sm:h-[90vh] flex-col min-[1500px]:h-full w-full gap-6 min-[390px]:min-h-[0] min-[390px]:top-0 min-h-[35rem] md:h-[60vh] lg:h-[82vh] md:top-0 relative top-6 items-center text-center min-[1500px]:text-left md:w-[40%] justify-center min-[1500px]:w-[60%]">
           <Reveal>
           <h2  className="font-bold text-4xl lg:text-6xl lg:text-nowrap">THANG NGUYEN</h2>
@@ -105,7 +105,7 @@ const Hero = () => {
 
            </div>
 
-            <motion.div animate="scrollButton" variants={textVariants} className="relative z-30 lg:left-[1] w-[30%] h-[15%] md:h-[30%] md:w-[50%] min-[1500px]:left-[-20%] min-[1500px]:top-20 dark:md:left-[14%] min-[1500px]:dark:left-[-3%] min-[1500px]:dark:top-40 dark:md:top-[5%] lg:h-[30%] lg:w-[50%] dark:lg:left-[17%] dark:lg:top-[5%]">
+            <motion.div animate="scrollButton" variants={textVariants} className="relative z-30 lg:left-[1] w-[30%] h-[15%] md:h-[30%] md:w-[50%] min-[1500px]:left-[-20%] min-[1500px]:top-[-2rem] dark:md:left-[14%] min-[1500px]:dark:left-[-3%] min-[1500px]:dark:top-40 dark:md:top-[5%] lg:h-[30%] lg:w-[50%] dark:lg:left-[17%] dark:lg:top-[5%]">
               <a href="#about">
               <Image alt="scroll" src={scroll} className="dark:hidden" />
             <Image alt="scroll" src={scrollWhite} className="dark:block hidden" />
@@ -116,7 +116,7 @@ const Hero = () => {
 
         </div>
         <div className="min-h-[40%] min-[1500px]:min-h-[80%] ">
-        <div className="relative md:h-[500px] md:w-[500px] w-[300px] h-[300px] lg:w-[700px] lg:h-[700px] top-2 min-[390px]:top-0 rounded-full overflow-hidden">
+        <div className="relative md:h-[500px] md:w-[500px] w-[300px] h-[300px] lg:w-[700px] lg:h-[700px] xl:h-[650px] xl:w-[650px] top-2 min-[390px]:top-0 rounded-full overflow-hidden">
             <Image src={portrait} className="object-cover" fill alt="hero"/>
       </div>
         </div>

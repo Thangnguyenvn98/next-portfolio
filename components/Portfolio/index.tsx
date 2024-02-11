@@ -32,19 +32,19 @@ const Single = ({ item }:{item:itemsProps}) => {
     }
 
     return (
-        <section id="project" className="dark:bg-black dark:text-white relative md:h-screen" >
-          <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden relative md:p-8 top-20 md:top-10 ">
+        <section id="project" className="dark:bg-black dark:text-white relative md:h-screen lg:min-h-screen" >
+          <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden relative md:p-8 top-20 md:top-10 lg:top-20 ">
             <div className="max-w-[1366px] p-10 h-full flex flex-col relative justify-center items-center overflow-hidden gap-10 md:p-0 md:gap-0">
-              <div className="relative flex w-full md:max-h-[500px] top-10 min-[390px]:top-14 md:top-0 lg:max-h-[700px]" >
+              <div className="relative flex w-full md:max-h-[500px] top-10 min-[390px]:top-14 md:top-0 lg:max-h-[700px] xl:min-h-[700px]" >
                 
                 <div className="h-full w-full relative overflow-hidden aspect-square ">
-                    <Image src={item.src} alt={item.alt} className="object-cover" fill/>
+                    <Image src={item.src} alt={item.alt} className="object-cover object-center" fill/>
                 </div>
                 
              
                 
               </div>
-              <div className="flex flex-col gap-10 relative top-10 " >
+              <div className="flex flex-col gap-10 relative top-10 lg:min-h-[500px] xl:min-h-[900px]  " >
                 <Reveal>
                 <h2 className="font-bold text-2xl lg:text-6xl">{item.title}</h2>
                 </Reveal>
