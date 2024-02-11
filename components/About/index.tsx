@@ -18,7 +18,7 @@ export default function About() {
 
     useEffect(()=>{
       setIsMounted(true)
-    })
+    },[])
 
     if (!isMounted) {
       return null
@@ -65,7 +65,7 @@ export default function About() {
            
             <div className="flex flex-col items-center gap-5">
               {techIcons.map((icon) => (
-                <Reveal>
+                <Reveal key={icon.src}>
                 <TechIcon key={icon.src} src={icon.src} alt={icon.alt}/>
                 </Reveal>  
               ))}

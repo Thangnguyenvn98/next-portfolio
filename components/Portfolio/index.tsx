@@ -25,7 +25,7 @@ const Single = ({ item }:{item:itemsProps}) => {
 
     useEffect(()=>{
       setIsMounted(true)
-    })
+    },[])
 
     if(!isMounted) {
       return null

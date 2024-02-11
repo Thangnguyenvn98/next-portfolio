@@ -20,7 +20,7 @@ const Reveal:React.FC<Props> = ({children,width="fit-content"}) => {
             slideControls.start("visible")
         }
 
-    },[isInView])
+    },[isInView,mainControls,slideControls])
 
   return (
     <div ref={ref} style={{position:"relative", width, overflow:"hidden"}}>
