@@ -34,7 +34,7 @@ export default function Home() {
         <Portfolio />
      
 
-      <section id="contact" className="dark:bg-black lg:h-[100vh] ">
+      <section id="contact" className="dark:bg-black">
         <Contact/>
         <Footer/>
 

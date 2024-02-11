@@ -49,18 +49,18 @@ const Hero = () => {
     return null;
   }
   return (
-    <div className="xl:h-[calc(100vh-100px)] min-h-screen overflow-hidden">
-      <div className="xl:ml-[20%] xl:max-w-[1366px] xl:h-full min-h-screen flex flex-col-reverse justify-between items-center xl:flex-row xl:justify-between xl:space-x-10 xl:mt-20">
-      <div className="flex xl:items-start flex-col xl:h-full w-full gap-6 h-[100vh] md:h-[60vh] lg:h-[82vh] md:top-0 relative top-4 items-center text-center xl:text-left md:w-[40%] justify-center xl:w-[60%]">
+    <div className="min-[1500px]:h-[calc(100vh-100px)] min-h-screen overflow-hidden">
+      <div className="min-[1500px]:ml-[20%] min-[1500px]:max-w-[1366px] min-[1500px]:h-full min-h-screen flex flex-col-reverse justify-between items-center min-[1500px]:flex-row min-[1500px]:justify-between min-[1500px]:space-x-10 min-[1500px]:mt-20">
+      <div className="flex min-[1500px]:items-start sm:h-[90vh] flex-col min-[1500px]:h-full w-full gap-6 min-[390px]:min-h-[0] min-[390px]:top-0 min-h-[35rem] md:h-[60vh] lg:h-[82vh] md:top-0 relative top-6 items-center text-center min-[1500px]:text-left md:w-[40%] justify-center min-[1500px]:w-[60%]">
           <Reveal>
-          <h2  className="font-bold text-4xl lg:text-6xl">THANG NGUYEN</h2>
+          <h2  className="font-bold text-4xl lg:text-6xl lg:text-nowrap">THANG NGUYEN</h2>
           </Reveal>
           <Reveal>
           <h1  className="font-semibold text-lg lg:text-4xl">Full-Stack Developer👋</h1>
           </Reveal>
           
         <Reveal>
-        <p  className="mt-10 font-light text-lg lg:text-2xl">A hard-working and passionate software developer based in  <a href="#map" className="lg:text-2xl text-lg font-bold">Toronto, Canada 📍</a> </p>
+        <p  className="font-light text-lg lg:text-2xl">A hard-working and passionate software developer based in  <a href="#map" className="lg:text-2xl text-lg font-bold lg:text-nowrap">Toronto, Canada 📍</a> </p>
 
         </Reveal>
         
@@ -70,7 +70,7 @@ const Hero = () => {
       
           <div  className="flex flex-col gap-6 lg:gap-10">
            
-            <div  className="flex space-x-6 xl:justify-start justify-center lg:gap-6">
+            <div  className="flex space-x-6 min-[1500px]:justify-start justify-center lg:gap-6">
              <Reveal>
             <a  href="https://www.linkedin.com/in/thang-nguyen98/" className="hover:text-blue-500 dark:hover:text-lime-800 " target="_blank"><AiFillLinkedin size={50}/></a>
             </Reveal>
@@ -105,7 +105,7 @@ const Hero = () => {
 
            </div>
 
-            <motion.div animate="scrollButton" variants={textVariants} className="relative z-30 lg:left-[1] w-[30%] h-[15%] lg:h-[30%] lg:w-[50%] dark:lg:left-[16%] dark:lg:top-[5%]">
+            <motion.div animate="scrollButton" variants={textVariants} className="relative z-30 lg:left-[1] w-[30%] h-[15%] md:h-[30%] md:w-[50%] min-[1500px]:left-[-20%] min-[1500px]:top-20 dark:md:left-[14%] min-[1500px]:dark:left-[-3%] min-[1500px]:dark:top-40 dark:md:top-[5%] lg:h-[30%] lg:w-[50%] dark:lg:left-[17%] dark:lg:top-[5%]">
               <a href="#about">
               <Image alt="scroll" src={scroll} className="dark:hidden" />
             <Image alt="scroll" src={scrollWhite} className="dark:block hidden" />
@@ -115,9 +115,12 @@ const Hero = () => {
            
 
         </div>
-        <div className="relative h-[300px] w-[300px] md:h-[500px] md:w-[500px] lg:w-[700px] lg:h-[700px] xl:top-[17%] xl:h-[50%] xl:w-[50%] top-2 rounded-full overflow-hidden">
+        <div className="min-h-[40%] min-[1500px]:min-h-[80%] ">
+        <div className="relative md:h-[500px] md:w-[500px] w-[300px] h-[300px] lg:w-[700px] lg:h-[700px] top-2 min-[390px]:top-0 rounded-full overflow-hidden">
             <Image src={portrait} className="object-cover" fill alt="hero"/>
       </div>
+        </div>
+   
       </div>
     
      

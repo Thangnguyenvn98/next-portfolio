@@ -7,7 +7,7 @@ export default function Footer(){
     const currentDate = new Date();
     return (
        
-        <footer className="px-10 bg-neutral-400 dark:bg-gray-200 w-full py-10 mt-10 lg:h-full md:h-[20vh]">
+        <footer className="bg-slate-950 dark:bg-gray-200 w-full p-10">
         <div className="px-10 text-white font-bold mt-8 dark:text-black">
           <div className="flex-col text-xl md:flex md:flex-row md:justify-between gap-4 justify-center text-center md:items-center">
           <Reveal> 

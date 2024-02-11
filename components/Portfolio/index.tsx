@@ -8,6 +8,7 @@ import {motion, useScroll, useSpring, useTransform} from "framer-motion"
 import { useEffect, useRef, useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import Reveal from "../Reveal/reveal";
+import React from "react"
 
 interface itemsProps {
   src:StaticImageData;
@@ -20,31 +21,44 @@ interface itemsProps {
 
 
 const Single = ({ item }:{item:itemsProps}) => {
- 
+    const [isMounted,setIsMounted] = useState(false)
+
+    useEffect(()=>{
+      setIsMounted(true)
+    })
+
+    if(!isMounted) {
+      return null
+    }
 
     return (
-        <section id="project" className="dark:bg-black dark:text-white relative  " >
-          <div className="md:flex-row flex flex-col items-center justify-center w-full h-full gap-y-10 overflow-hidden relative top-[10rem] md:top-0">
-            <div className="max-w-[1366px] p-10 h-full flex flex-col justify-center items-center md:gap-10 overflow-hidden gap-10">
-              <div className="flex-1 md:h-[50%] h-[4 0%]" >
-                <div className="w-full h-full relative overflow-hidden">
-                    <Image src={item.src} alt={item.alt} className="object-cover"/>
+        <section id="project" className="dark:bg-black dark:text-white relative md:h-screen" >
+          <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden relative md:p-8 top-20 md:top-10 ">
+            <div className="max-w-[1366px] p-10 h-full flex flex-col relative justify-center items-center overflow-hidden gap-10 md:p-0 md:gap-0">
+              <div className="relative flex w-full md:max-h-[500px] top-10 min-[390px]:top-14 md:top-0 lg:max-h-[700px]" >
+                
+                <div className="h-full w-full relative overflow-hidden aspect-square ">
+                    <Image src={item.src} alt={item.alt} className="object-cover" fill/>
                 </div>
                 
+             
+                
               </div>
-              <div className="flex flex-1 flex-col gap-10" >
+              <div className="flex flex-col gap-10 relative top-10 " >
                 <Reveal>
                 <h2 className="font-bold text-2xl lg:text-6xl">{item.title}</h2>
                 </Reveal>
                 <Reveal>
-                <p className="font-light lg:text-2xl text-slate-300">{item.description}</p>
+                <p className="font-light lg:text-2xl text-slate-400">{item.description}</p>
                 </Reveal>
                 <Reveal>
-                <p className="font-light lg:text-2xl text-blue-600 dark:text-green-500">{item.technologies}</p>
+                <p className="font-semibold lg:text-2xl text-blue-400 dark:text-green-500">{item.technologies}</p>
                 </Reveal>
-                  <Reveal>
-                  <button className="border-none text-2xl p-10 w-[200px] cursor-pointer rounded-md bg-slate-300">
-                    <a href={item.github} target='_blank'>See Code</a>
+                <Reveal>
+                  <button className="border-none text-2xl p-2 w-[150px] dark:hover:text-green-500 hover:text-blue-400 text-center cursor-pointer rounded-md bg-slate-300 dark:bg-yellow-600 md:p-4 md:text-lg lg:text-4xl lg:p-8 lg:w-[300px]">
+                    
+                    <a href={item.github} target='_blank' className='text-center'>See Code</a>
+                    
                   </button>
                   </Reveal>
               
@@ -58,7 +72,7 @@ const Single = ({ item }:{item:itemsProps}) => {
 export default function Portfolio(){
     const [isMounted,setIsMounted] = useState(false)
 
-    const ref = useRef();
+    const ref= React.useRef<HTMLDivElement>(null);
 
     const { scrollYProgress } = useScroll({
       target: ref,
@@ -92,8 +106,8 @@ export default function Portfolio(){
 
     return(
      <div ref={ref} className="relative dark:bg-black">
-        <div className="sticky top-0 left-0 z-10 text-center text-blue-400 lg:text-6xl text-4xl font-bold pt-20">
-            <h1 className="dark: text-green-500">Featured Works</h1>
+        <div className="sticky top-0 left-0 z-10 text-center text-blue-400 lg:text-6xl text-4xl font-bold pt-20 xl:pt-6 lg:pt-6">
+            <h1 className="dark:text-green-500">Featured Works</h1>
             <motion.div style={{scaleX}} className="h-[10px] bg-black dark:bg-white"></motion.div>
         </div>
         {projects.map((project)=>(
