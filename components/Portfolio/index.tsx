@@ -33,20 +33,21 @@ const Single = ({ item }:{item:itemsProps}) => {
 
     return (
         <section id="project" className="dark:bg-black dark:text-white relative md:h-screen lg:min-h-screen" >
-          <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden relative md:p-8 top-20 md:top-10 lg:top-20 ">
-            <div className="max-w-[1366px] p-10 h-full flex flex-col relative justify-center items-center overflow-hidden gap-10 md:p-0 md:gap-0">
-              <div className="relative flex w-full md:max-h-[500px] top-10 min-[390px]:top-14 md:top-0 lg:max-h-[700px] xl:min-h-[700px]" >
+          <div className="flex flex-col items-center justify-center w-full h-full overflow-hidden relative md:p-8 top-20 md:top-10 lg:top-20 lg:min-h-screen ">
+            <div className="max-w-[1366px] p-10 h-full flex flex-col relative justify-center items-center  gap-10
+            lg:grid lg:grid-cols-1 lg:min-h-screen lg:gap-10 lg:overflow-y-scroll lg:no-scrollbar
+            ">
+              <div className="relative flex w-full md:max-h-[500px] top-10 min-[390px]:top-14 md:top-10 lg:min-h-[450px] lg:row-start-1 overflow-hidden lg:row-span-1" >
                 
-                <div className="h-full w-full relative overflow-hidden aspect-square ">
-                    <Image src={item.src} alt={item.alt} className="object-cover object-center" fill/>
-                </div>
+                    <Image src={item.src} alt={item.alt} className="object-cover object-center"/>
                 
+              
              
                 
               </div>
-              <div className="flex flex-col gap-10 relative top-10 lg:min-h-[500px] xl:min-h-[900px]  " >
+              <div className="flex flex-col gap-10 relative top-10 lg:row-start-2 lg:p-4 lg:h-auto " >
                 <Reveal>
-                <h2 className="font-bold text-2xl lg:text-6xl">{item.title}</h2>
+                <h2 className="font-bold text-2xl lg:text-4xl">{item.title}</h2>
                 </Reveal>
                 <Reveal>
                 <p className="font-light lg:text-2xl text-slate-400">{item.description}</p>
@@ -55,7 +56,7 @@ const Single = ({ item }:{item:itemsProps}) => {
                 <p className="font-semibold lg:text-2xl text-blue-400 dark:text-green-500">{item.technologies}</p>
                 </Reveal>
                 <Reveal>
-                  <button className="border-none text-2xl p-2 w-[150px] dark:hover:text-green-500 hover:text-blue-400 text-center cursor-pointer rounded-md bg-slate-300 dark:bg-yellow-600 md:p-4 md:text-lg lg:text-4xl lg:p-8 lg:w-[300px]">
+                  <button className="border-none text-2xl p-2 w-[150px] dark:hover:text-green-500 hover:text-blue-400 text-center cursor-pointer rounded-md bg-slate-300 dark:bg-yellow-600 md:p-4 md:text-lg lg:text-4xl lg:p-8 lg:w-[300px] lg:mb-10">
                     
                     <a href={item.github} target='_blank' className='text-center'>See Code</a>
                     
@@ -106,7 +107,7 @@ export default function Portfolio(){
 
     return(
      <div ref={ref} className="relative dark:bg-black">
-        <div className="sticky top-0 left-0 z-10 text-center text-blue-400 lg:text-6xl text-4xl font-bold pt-20 xl:pt-6 lg:pt-6">
+        <div className="sticky top-0 left-0 z-10 text-center text-blue-400 text-4xl font-bold pt-20 xl:pt-6 lg:pt-6">
             <h1 className="dark:text-green-500">Featured Works</h1>
             <motion.div style={{scaleX}} className="h-[10px] bg-black dark:bg-white"></motion.div>
         </div>
