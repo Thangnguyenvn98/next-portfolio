@@ -51,7 +51,7 @@ const Hero = () => {
   return (
     <div className="min-[1500px]:min-h-screen min-h-screen overflow-hidden">
       <div className="min-[1500px]:ml-[20%] min-[1500px]:max-w-[1366px] min-[1500px]:h-full min-h-screen flex flex-col-reverse justify-between items-center min-[1500px]:flex-row min-[1500px]:justify-between min-[1500px]:space-x-10 gap-10 ">
-      <div className="flex min-[1500px]:items-start sm:h-[90vh] flex-col min-[1500px]:h-full w-full gap-6 min-[390px]:min-h-[0] min-[390px]:top-0 min-h-[35rem] md:h-[auto] dark:md:h-auto dark:md:w-auto lg:h-[100vh] md:top-10 relative top-6 items-center text-center min-[1500px]:text-left md:w-[auto] justify-center min-[1500px]:w-[60%]">
+      <div className="flex min-[1500px]:items-start sm:h-[90vh] flex-col min-[1500px]:h-full w-full gap-6 min-[390px]:min-h-[0] min-[390px]:top-0 min-h-[35rem] md:h-[auto] dark:md:h-auto dark:md:w-auto lg:h-[auto] md:top-10 relative top-6 items-center text-center min-[1500px]:text-left md:w-[auto] justify-center min-[1500px]:w-[60%]">
           <Reveal>
           <h2  className="font-bold text-4xl lg:text-6xl lg:text-nowrap">THANG NGUYEN</h2>
           </Reveal>
