@@ -23,9 +23,9 @@ export default function Navbar({dark,setDark}: NavBarProps) {
     return (
         <div id="navbar" className="text-black h-[100px] flex justify-between items-center z-[999]  dark:text-white">
              <Sidebar/>
-          <div className="cursor-pointer fixed text-2xl left-40 dark:text-white">
+          <div className="cursor-pointer fixed text-2xl left-40 dark:text-white z-[999] ">
             
-            <motion.a href="#home" initial={{opacity: 0, scale:0.5}} animate={{opacity: 1, scale:1}} transition={{duration:0.5}} className="hidden md:inline-block font-bold dark:text-white">
+            <motion.a href="#home" initial={{opacity: 0, scale:0.5}} animate={{opacity: 1, scale:1}} transition={{duration:0.5}} className="z-[999] hidden md:inline-block font-bold dark:text-white">
               Thang.dev
               </motion.a>
   

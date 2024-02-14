@@ -30,7 +30,7 @@ export default function Contact(){
         return null
       }
     return (
-        <div className="p-8 dark:text-white lg:relative lg:min-h-[80vh] lg:mt-20 md:min-h-[80vh] md:mt-16">
+        <div className="p-8 dark:text-white lg:relative lg:min-h-screen lg:mt-20 md:min-h-[80vh] md:mt-16">
             <div className="flex flex-col justify-center items-center">
                 <Reveal>
                     <h2 className="lg:text-xl text-md mt-20 lg:mt-0">GET IN TOUCH</h2>
@@ -39,7 +39,7 @@ export default function Contact(){
                     <h1 className="lg:text-6xl text-4xl font-extrabold text-blue-400 dark:text-green-500">Contact</h1>
                 </Reveal>
             </div>
-            <div className="grid grid-cols-1 grid-rows-2 justify-center md:grid-cols-[minmax(200px,350px),minmax(200px,350px)] gap-y-10 sm:flex-row md:grid-rows-[minmax(300px,740px)] sm:gap-x-10 p-10
+            <div className="grid grid-cols-1 grid-rows-2 justify-center md:grid-cols-[minmax(200px,400px),minmax(200px,400px)] gap-y-10 sm:flex-row md:grid-rows-[minmax(300px,740px)] sm:gap-x-10 p-10
             lg:grid-cols-[minmax(400px,800px),minmax(400px,800px)] lg:grid-rows-[minmax(400px,800px)]">
                 <div className="h-full w-full">
                     <div className="text-center items-center grid grid-cols-1 grid-rows-2 h-full md:h-full gap-y-10 lg:gap-y-20 ">
@@ -52,7 +52,7 @@ export default function Contact(){
                                     <h3 className="font-extrabold sm:text-4xl text-2xl">Email</h3>
                                 </Reveal>
                                 <Reveal>
-                                    <h3 className="sm:text-lg md:text-2xl text-md">thang.nguyen@torontomu.ca</h3>
+                                    <h3 className="sm:text-lg text-md">thang.nguyen@torontomu.ca</h3>
                                 </Reveal>
                                 <Reveal>
                                     <a href="mailto:thang.nguyen@torontomu.ca" className="text-blue-500 dark:text-green-500 font-semibold text-lg">Send me a message</a>

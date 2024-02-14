@@ -26,10 +26,10 @@ export default function About() {
 
 
     return (
-      <div className="p-4 lg:mt-0 flex flex-col md:h-screen lg:h-screen lg:p-4">
+      <div className="p-4 lg:mt-0 flex flex-col md:min-h-screen lg:h-screen lg:p-4">
       
             <div className="flex flex-col justify-center items-center relative gap-10 min-h-screen md:grid md:grid-cols-2 md:min-h-[45%] md:min-w-[800px] md:p-12 lg:grid-cols-2 lg:grid lg:items-center lg:justify-center lg:min-h-[50%] lg:min-w-[900px] lg:p-10">
-            <div className="text-center flex flex-col gap-4 md:text-left" >
+            <div className="text-center flex flex-col gap-4 md:text-left relative top-10" >
                 <Reveal>
                 <h1 className="text-4xl font-bold text-blue-400 lg:text-6xl ">Overview</h1>
                 </Reveal>

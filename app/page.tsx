@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import About from "../components/About";
 import Footer from "../components/Footer";
@@ -12,8 +12,17 @@ import Hero from "@/components/Hero/hero";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
+  const [isMounted,setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  },[])
+
+  if (!isMounted) {
+    return null
+  }
   return (
-    <div className={darkMode ? "dark" : ""}>
+    <div className={darkMode ? "dark dark:bg-black" : ""}>
     
       
   
